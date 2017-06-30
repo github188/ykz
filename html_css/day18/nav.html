@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>二级</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<style type="text/css">
+			#nav{height: 60px; background: #000;}
+			#nav>ul>li{
+				float: left;
+				position:relative;
+			}
+			#nav>ul>li>a{
+				display: block;
+				padding:0 30px;
+				height: 60px;
+				line-height: 60px;
+			}
+			#nav>ul>li>a:hover{background:#f40;color: #fff;}
+			#nav>ul>li:hover>ul{display: block;}
+			#nav>ul>li>ul{position: absolute;width: 1000px; display: none;}
+			#nav>ul>li>ul>li{float: left;}
+			#nav>ul>li>ul>li>a{color#fff;display: block;height: 40px;line-height:40px;padding: 0 30px; background: #f40;}
+			#nav>ul>li>ul>li>a:hover{color: #ccc;}
+		</style>
+	</head>
+	<body>
+		<div id="nav">
+			<ul>
+				<li>
+					<a href="#">首页</a>
+				</li>
+				<li>
+					<a href="#">课程</a>
+					<ul>
+						<li>
+							<a href="#">HTML5</a>
+						</li>
+						<li>
+							<a href="#">安卓</a>
+						</li>
+						<li>
+							<a href="#">PHP</a>
+						</li>
+						<li>
+							<a href="#">UI</a>
+						</li>
+						<li>
+							<a href="#">HTML5</a>
+						</li>
+						<li>
+							<a href="#">安卓</a>
+						</li>
+						<li>
+							<a href="#">PHP</a>
+						</li>
+						<li>
+							<a href="#">UI</a>
+						</li>
+					</ul>
+
+					
+				</li>
+				<li><a href="#">走进千锋</a></li>
+				<li><a href="#">双选会</a></li>
+				<li><a href="#">千锋教育</a></li>
+				<li><a href="#">好程序员</a></li>
+				<li><a href="#">双选会</a></li>
+				<li><a href="#">千锋教育</a></li>
+				<li><a href="#">好程序员</a></li>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,69 @@
+@charset "utf-8";
+#nav{ width: 779px; height: 44px; margin: 0 auto; background:url(../images/2_02.jpg) repeat-y;}
+#nav .nav-a1{ display: block; width: 16px; height: 20px;float: left; background: url(../images/01_03.jpg) no-repeat; float: left; margin-top: 10px; margin-left: 24px;} 
+#nav ul{ float: left; margin-left: 28px;}
+#nav ul li{ float: left;}
+#nav ul li a{ display: block; padding: 0 29px; color: #ffffff; height: 44px; line-height: 44px; font-size: 14px;}
+#nav .nav-a2{ display: block; width: 15px; height: 15px; background: url(../images/01_09.jpg) no-repeat; margin-top: 15px; margin-left:31px ; float: left;}
+#nav .nav-a3{ display: block; width: 14px; height: 18px; background: url(../images/01_06.jpg) no-repeat; margin-top: 11px; margin-left: 57px; float: left;}
+
+#logo{ width: 779px; height:61px ; margin: 0 auto; background: #eef1f4; line-height: 61px; overflow: hidden;}
+#logo h1 a{ display: block; font-size: 30px;float: left; color: #4f302f;margin-left: 16px;}
+#logo form{ margin-left: 331px; float: left;}
+#logo form span{ font-size: 14px; color: #05070a;}
+#logo form input{ border: none;color: #bcbdbf; margin-left: 25px; background: #eef1f4; width: 120px; font-size:14px;} 
+#logo a{ font-size: 14px; float: right; margin-right: 15px; color: #030304;}
+
+#banner{ width: 779px; height: 175px; margin: 0 auto;}
+#banner a{ height: 175px;}
+#banner img{ display: block;}
+
+#main{ width: 743px; margin: 0 auto; overflow: hidden; padding: 0 18px;}
+#main .p1{ font-size: 18px; color: #7a667a; text-align: center;line-height: 26px; margin-top: 31px;}
+#main .p1 a{ color: #0070c9;}
+#main form{overflow: hidden;position: relative;}
+
+form input{ height: 32px; line-height: 32px; color: #b2b2b2; border: 1px solid #d6d6d6; border-radius: 3px;width: 726px; height: 32px;  padding-left: 15px;}
+form .email{  margin-top: 11px; }
+form .wenhao1{display: block; width: 17px; height: 16px; background: url(../images/01_17.jpg) no-repeat; position: absolute;top:21px; right: 7px;}
+form .password{ margin-top: 34px;}
+form .resetpassword{margin-top: 14px; }
+form .xs{ margin-top: 34px; width: 345px; margin-right: 10px; float: left;}
+form .name{ width: 354px;margin-top: 34px; }      
+form .datetime{ margin-top: 14px; center;width:725px;}
+form .wenhao2 {display: block; width: 17px; height: 16px; background: url(../images/01_17.jpg) no-repeat; position: absolute;top:261px; right: 7px;}
+form .hr1{border:0.5px solid #e7e7e8; margin-top: 34px; margin-bottom: 30px;}
+form .hr2{border:0.5px solid #e7e7e8; margin-top: 21px; margin-bottom: 30px;}
+form select{height: 32px; line-height: 32px; color: #333333; border: 1px solid #d6d6d6; border-radius: 3px;width: 743px; height: 32px;  padding-left: 15px; margin-top: 34px;}
+form .daan{ margin-top: 14px;}
+form .s1{margin-top:0px;}
+form .s4{margin-top:0px;}
+#main form p{color: #333333; font-size: 14px; margin-top: 20px;}
+
+#main form .gg{ margin-top: 0; font-size: 16px; color: #333333; text-align: left; background: url(../images/01_21.jpg) no-repeat left top; padding-left: 22px; margin-top: 24px;}
+#main form .neirong{ margin-top: 0; font-size: 16px; color: #333333; text-align: left;background: url(../images/01_21.jpg) no-repeat left top;padding-left: 22px;margin-top: 12px;}
+#main form span{ font-size: 12px; color: #666666; margin-left: 22px; margin-top: 2px; display: block;}
+
+form .box4{ overflow: hidden;}
+form .hr3{border:0.5px solid #e7e7e8; margin-top: 21px; margin-bottom: 30px;}
+form .tu{ display: block;width: 121px; height: 59px; background: url(../images/3_03.jpg) no-repeat; float: left;}
+form .yzm{ width: 481px; float: right; } 
+form .new-a{ color: #0070c9; font-size: 14px; background: url(../images/01_25.jpg) no-repeat left center; height: 26px; line-height: 26px;padding:0 15px 0 20px; border-right: 1px solid #cacad1; float: left; margin-left: 139px;margin-top: 13px;}
+form .t-a{color: #0070c9; font-size: 14px; background: url(../images/01_27.jpg) no-repeat 16px center;height: 26px; line-height: 26px;padding-left:39px;float: left;margin-top: 13px;}
+
+form .hr4{border:0.5px solid #e7e7e8; margin-top: 22px; margin-bottom: 25px;}
+form .p4{ font-size: 14px; color: #333333; text-align: center;}
+form .p4 a{ color: #0070c9;}
+form .jixu{ font-size: 18px; color: #0070c9;border: none; background: #fff; font-weight: bold; margin-top: 44px;margin-bottom: 37px;} 
+
+#footer{ background: #f2f2f2; height: 95px; width: 757px; margin: 0 auto;overflow: hidden; padding-left: 22px;}
+#footer p{ font-size: 12px; color: #999999; margin-top: 23px;} 
+#footer p a{ color: #0070c9;}
+#footer .p5{ font-family: "微软雅黑"; margin-top: 17px; float: left;}
+#footer ul{ margin-top: 17px; margin-left: 248px;}
+#footer ul li{ float: left;}
+#footer ul li a{display: block; padding: 0 12px; color: #666666; border-right: 1px solid #d6d6d6;}
+#footer span{ background: url(../images/01_32.jpg) no-repeat left center;padding-left: 22px; color: #666666; font-size: 12px; display: block;height: 16px; float: right;margin-right: 22px;}
+
+
+

@@ -1,0 +1,38 @@
+@charset "utf-8";
+/*bannerwarpper*/
+#bannerwarpper{ height:253px;width:100%; position:relative; background:url(../images/demo02/xdjy_02_02.jpg) no-repeat; background-size:100% 100%; _background:#d3f4fb;}
+#bannerwarpper a{ width:1008px; height:253px; margin:0 auto; display:block; _background:url(../images/demo02/xdjy_02_02.jpg) no-repeat;}
+#bannerwarpper img{ display:block; width:100%;height:253px;}
+
+
+
+
+
+/*footernavwrapper*/
+#footernavwrapper{ height:229px; background:#ec6c00;}
+.footernav{ height:229px; width:1001px; background:#ec6c00; margin:0 auto;}
+.footernav .footernav-left{ width:400px; height:189px; padding:40px 0 0 1px; color:#FFF; font-size:12px; float:left;}
+.footernav .footernav-left .p1{ height:21px; line-height:21px; background:url(../images/english-images/images/xdjy_03_16.png) no-repeat left center; padding-left:30px;}
+.footernav .footernav-left .p2{ height:15px; line-height:15px; background:url(../images/english-images/images/xdjy_03_19.png) no-repeat left center; padding-left:30px; margin-top:14px;}
+.footernav .footernav-left .p3{ height:19px; line-height:19px; background:url(../images/english-images/images/xdjy_03_21.png) no-repeat left center; padding-left:30px; margin-top:13px;}
+.footernav .footernav-left .alink{width:115px; height:16px; margin-top:34px;}
+.footernav .footernav-left .alink a{ display:block; width:16px; height:16px; float:left; margin-right:7px;}
+.footernav .footernav-left .alink .tubiao1{ background:url(../images/english-images/images/xdjy_03_23.png) no-repeat left center;}
+.footernav .footernav-left .alink .tubiao2{ background:url(../images/english-images/images/xdjy_03_25.png) no-repeat left center;}
+.footernav .footernav-left .alink .tubiao3{ background:url(../images/english-images/images/xdjy_03_32.png) no-repeat left center;}
+.footernav .footernav-left .alink .tubiao4{ background:url(../images/english-images/images/xdjy_03_27.png) no-repeat left center;}
+.footernav .footernav-left .alink .tubiao5{ background:url(../images/english-images/images/xdjy_03_29.png) no-repeat left center;}
+
+.footernav .footernav-right{ width:600px; height:186px; float:left; padding-top:43px;}
+.footernav .footernav-right dl{ float:left; width:100px;}
+.footernav .footernav-right dl dt h3{ font-weight:bold;margin-bottom:10px;}
+.footernav .footernav-right dl a{ color:#FFF; font-size:12px;}
+.footernav .footernav-right dl dd{ height:18px; line-height:18px; }
+
+/*footerwrapper*/
+#footerwrapper{ height:45px; background:#000000;}
+.footer{ width:1001px; height:45px; margin:0 auto; position:relative;}
+.footer p{ text-align:center; color:#FFF; font-family:"微软雅黑";font-size:12px; height:45px; line-height:45px;}
+.footer a{ display:block; width:20px; height:20px; position:absolute; bottom:9px; right:180px; background:url(../images/english-images/images/xdjy_03_40.jpg) no-repeat;}
+
+

@@ -1,0 +1,51 @@
+/*网页头部*/
+#header{width:100%;height:46.87vw;background:#fb683c;border-bottom:1px solid #ff6e31;}
+#header section:nth-of-type(1){width:100%;height:14.53vw;overflow: hidden;}
+#header section:nth-of-type(1) a{color:#cccccc;font-size:3.12vw;line-height:5.62vw;margin-left:2.03vw;margin-top:0.93vw;display: block;}
+#header section:nth-of-type(1) a span{text-decoration: underline;}
+#header section:nth-of-type(1) a:nth-of-type(2){float: right;color:#fff;font-size:5.62vw;display: block;margin-right:3.75vw;margin-top:2vw;}
+#header section:nth-of-type(1) a:nth-of-type(3){float: right;font-size:4.06vw;color:#fff;text-decoration: underline;margin-right:5.46vw;margin-top:2.4vw;display: block;}
+
+#header section:nth-of-type(2){width: 100%;height:32.18vw;padding-left:4.68vw;box-sizing: border-box;}
+#header section:nth-of-type(2) a:nth-of-type(1){height:21.56vw;width:21.56vw;border:0.46vw solid #fff;border-radius:50%;display: block;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

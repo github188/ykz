@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+/*清除默认样式*/
+*{ margin:0;padding:0; list-style:none;font-weight: normal;}
+.fl{ float:left;}
+.fr{ float:right;}
+/*头部*/
+	body{background:#EEF3FA;}
+	#header{ width:1000px; height:100px; background:#ffffff; margin:0 auto;}
+	#header img{margin:42px 0 38px 21px;float:left;}
+	#header .headerleft{margin:39px 0 34px 489px;display:inline-block;float:left;}
+	.headerleft input{width:210px; height:26px; line-height:26px; padding-left:15px; border:#e5e5e5 solid 1px;  background:#f1f1f1 url(images/headerleft.jpg) no-repeat right center;}
+/*导航nav*/
+	#nav{ width:1000px; height:59px; margin:0 auto; }
+	#nav ul{width:1000px;}
+	#nav ul li{ width:124px; height:59px; line-height:59px; text-align:center; border-right:1px solid #494949; background:#323232; float:left; color:#FFF; }
+	#nav .listright{ border-right:1px solid #323232;}
+	#nav a{ text-decoration:none; color:#FFF;}
+	#nav a:hover{ color:#F00;}
+/*banner*/
+	#banner{ width:1000px; height:464px; margin:0 auto;}
+/*main-top-left*/
+.main{ width:1000px; margin:0 auto;  }
+.main-top{ width:1000px; height:242px;} 
+.t-left{ width:478px; height:205px;  background:#FFF; padding:37px 0 0 22px;}
+.t-left dt h2{padding-bottom:17px; font-size:16px;}
+.t-left dd{ width:479px;height:24px; line-height:24px; font-size:12px; background:}
+.t-left a{text-decoration:none; color:#000;}
+.t-left a:hover{ color:#F00;}
+.t-left dd span{ float:right; padding-right:29px; display:inline-block;}
+/*main-top-center*/
+.t-center{ width:200px; height:205px; background:#f1f1f1; padding:37px 18px 0 22px;}
+.t-center h2{padding-bottom:17px; line-height:63px;}
+.t-center .t-center-1{line-height:40px;}
+.t-center-2,a {font-size:12px; line-height:24px; color:#949494; text-decoration:none;}
+.t-center a:hover{ color:#F00;}
+.t-center .t-center-1{font-size:14px;}
+/*main-center*/
+.main-center{ width:980px; margin:0 auto; background: #FFF; padding:30px 0 17px 20px; font-size:18px; line-height:18px;}
+/*main-bottom*/
+.main-bottom{ width:1000px; height:240px; margin:0 auto; background:#FFF;}
+.main_bottom_img{ float:left; margin:0 20px;  width:210px;}
+.main_bottom_img span{ line-height:26px; padding-top:4px; float:left; width:210px;}

@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS rester*/
+*{ margin:0; padding:0;}
+h1,h2,h3,h4,h5,h6,b,strong{ font-weight:100}
+ul,ol{ list-style:none;}
+i,em{ font-style:normal;}
+a{ text-decoration:none;}
+input{ outline:0;}
+img{ border:0;}
+/*logo开始*/
+#logowrapper{ height:104px; background:#f4f4f4;}
+.logo{ width:1004px; height:104px; margin:0 auto; padding-left:4px;background:#f4f4f4;}
+.logo h1{ width:265px; height:57px; background:url(../images/logo.jpg) no-repeat; float:left; margin-top:27px;}
+.logo h1 a{ width:265px; height:57px; display:block; text-indent:-99999px;}
+.telephone{ width:213px; height:52px; float:right; margin-top:33px; margin-right:3px; background:url(../images/telephone.jpg) no-repeat;}
+
+/*nav开始*/
+#navwrapper{ height:39px; background:#333333; border-top:1px solid #FFF;}
+.nav{ width:1008px; height:39px; margin:0 auto;background:#333333;}
+.nav ul{ height:39px; padding-left:6px;}
+.nav ul li{ float:left;}
+.nav ul li a{ height:39px; line-height:39px; color:#FFF; font-size:14px; padding:0 27.5px; display:block; float:left;}
+.nav ul li a:hover{ background:#ec6c00;}
+
+
+
+
+
+

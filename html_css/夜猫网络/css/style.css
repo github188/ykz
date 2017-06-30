@@ -1,0 +1,50 @@
+/*网页头部开始*/
+#header-wrapper{width: 100%;height:100px;background:#990c02;border-bottom:1px solid #740605;}
+.header{height:100px;background:#990c02;overflow: hidden;position: relative;}
+.header .logo{width: 360px;height: 79px;background:url(../images/logo.jpg) no-repeat;margin-top: 10px;margin-left: 30px;float: left;}
+.header .logo a{display: block;width: 360px;height: 79px;text-indent: -9999px;}
+
+.header .menu{float: right;overflow: hidden;margin-right: 20px;margin-top:11px;}
+.header .menu a:nth-of-type(1){color:#bf9d5d;border-right:1px solid #ca7228;background:url(../images/icon01.jpg) no-repeat;padding-left: 14px;}
+.header .menu a:nth-of-type(2){color:#bf9d5d;border-right:1px solid #ca7228;padding-left:5px;}
+.header .menu a:nth-of-type(3){color:#e9c404;border-right:1px solid #ca7228;padding-left:5px; font-weight: bold;background:url(../images/hot.gif) no-repeat 126px center;padding-right: 29px;}
+.header .menu a:hover{color: #e9c404;}
+.header .menu span{color: #bc9880;}
+
+.header .cx{height: 30px;width: 234px;background:url(../images/cengxing.jpg) no-repeat;float: right;top:37px;position: absolute;right:20px}
+.header .cx p{text-indent: -99999px;}
+/*网页头部结束*/
+
+/*网页导航开始*/
+#nav-wrapper{height:34px;background:#b80002;border-top:1px solid #c80410;border-bottom:1px solid #c80410;width:100%;}
+.nav{height: 34px;background: #b80002;}
+.nav ul{margin-left:37px; overflow:hidden;}
+.nav ul li{float: left;}
+.nav ul li:nth-of-type(1){border-left:1px solid #9b0000;}
+.nav ul li:nth-last-of-type(1){border-right:1px solid #cc0008;}
+.nav ul li a{height: 34px;line-height:34px;text-align:center;display: block;width: 109px;background:url(../images/nav-bg_07.jpg) no-repeat;color: #fff;font-size:14px;font-weight: bold;border-left:1px solid #cc0008;border-right:1px solid #9b0000; transition:all 0.5s linear;}
+.nav ul li a:hover{color: #ffea00;text-decoration:underline;font-size:13px;}
+/*网页导航结束*/
+
+/*网页banner开始*/
+#banner-wrapper{height:471px;width:100%;background:#fff;}
+.banner{height:471px;background:#fff; position:relative;width:auto; overflow:hidden;}
+.banner ul{height:471px;width:auto; overflow:hidden;}
+.banner ul li a{ display:block;width:auto;height:471px;}
+.banner ul li:nth-of-type(1) a{background:url(../images/bannner01.jpg) no-repeat;background-size:100% 100%;}
+.banner ul li:nth-of-type(2) a{background:url(../images/bannner02.jpg) no-repeat;background-size:100% 100%;}
+.banner ul li:nth-of-type(3) a{background:url(../images/bannner03.jpg) no-repeat;background-size:100% 100%;}
+.banner ul li:nth-of-type(4) a{background:url(../images/bannner04.jpg) no-repeat;background-size:100% 100%;}
+.banner ul li:nth-of-type(5) a{background:url(../images/bannner05.jpg) no-repeat;background-size:100% 100%;}
+.banner ul li:nth-of-type(6) a{background:url(../images/bannner06.jpg) no-repeat;background-size:100% 100%;}
+.banner .icon{ overflow:hidden;position:absolute;bottom:18px;left:50%;margin-left:-104px;}
+.banner .icon a{height:6px;width:30px; display:block; margin:0 2px;float:left; background:#fff;}
+.banner .icon a:hover{ background:#d4001b;}
+.banner a{ display:block;width:40px;height:60px; background:#000;color:#fff; line-height:60px; text-align:center; }
+.banner .zjt{ position:absolute;left:67px;top:50%; margin-top:-30px;opacity:0.5; z-index:-1}
+.banner .yjt{position:absolute;right:48px;top:50%; margin-top:-30px;opacity:0.5; z-index:-1}
+.banner:hover .zjt{z-index:1}
+.banner:hover .yjt{z-index:1}
+
+
+

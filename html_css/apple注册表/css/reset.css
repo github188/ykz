@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+/*reseter*/
+h1,h2,h3,h4,h5,h6,div,ol,ul,li,dl,dt,dd,body,html,form,fieldset,img,legend,p{ margin:0; padding:0}
+h1,h2,h3,h4,h5,h6,strong,b{ font-weight:100;}
+fieldset,img{ border:none;}
+ul,ol{ list-style:none;}
+body{ font-size:12px; font-family:"宋体","微软雅黑",Arial; background:#fff;}
+a{ color:#666;text-decoration:none;}
+a:hover{ color:#F00;}
+input{ outline:none;}
+.clear:after{content:".";clear:both;display:block;height:0;overflow:hidden;}
+i,em{ font-style:normal;}

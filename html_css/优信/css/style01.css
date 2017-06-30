@@ -1,0 +1,59 @@
+body{background:#f4f4f4;padding-bottom:15.31vw;}
+
+/*网页头部*/
+#header{width:100%;height:50.62vw;background:url(../images/banner_01.jpg) no-repeat;background-size:100% 100%;}
+#header section:nth-of-type(1){width:100%;height:10.31vw;overflow: hidden;}
+#header section:nth-of-type(1) a{color:#cccccc;font-size:3.12vw;line-height:5.62vw;margin-left:2.03vw;margin-top:0.93vw;display: block;}
+#header section:nth-of-type(1) a span{text-decoration: underline;}
+#header section:nth-of-type(2){width:100%;height:40.31vw;display:flex;justify-content: space-between;padding:0 2.5vw 0 3.43vw;box-sizing:border-box;}
+#header section:nth-of-type(2) a{color: #fff;font-size:5.62vw;line-height:1;}
+#header section:nth-of-type(2) form select{border: none;background:url(../images/select-bg_03.jpg) repeat;color:#fff;font-size:4.06vw;}
+
+/*menu开始*/
+#menu{width:100%;height:54.21vw;background:#fff;border-bottom:1px solid #e5e5e5;box-sizing:border-box;display:flex;justify-content: space-around;align-items: center;}
+#menu section:nth-child(1){width:43.75vw;height: 48.75vw;background:url(../images/menu-bg_03.jpg) no-repeat;background-size:100% 100%;border-radius:0.46vw;padding:6.09vw 0 0 5.31vw;box-sizing: border-box;}
+#menu section:nth-child(1) a{width:100%;height:100%;color:#fff;}
+#menu section:nth-child(1) a strong{font-size:5vw;font-weight:bold;display: block;margin-bottom:8.59vw;}
+#menu section:nth-child(1) a p{width:21.68vw;height:4.68vw;display:flex;justify-content: space-between;color:#000;line-height: 4.68vw;}
+#menu section:nth-child(1) a p span{display: block;color:#fff;background:url(../images/p-bg_03.jpg) no-repeat;font-size:3.12vw;width:2.65vw;height:4.68vw;text-align: center;margin:0 1px;border-radius:2px ;}
+
+#menu section:nth-child(2){width:48.75vw;height: 48.75vw;background:#fff;display:flex;flex-wrap: wrap;align-content: space-between;}
+#menu section:nth-child(2) a{width:100%;height:22.81vw;display:block;background:url(../images/menu-bg_05.jpg) no-repeat;background-size:100% 100%;border-radius:3px;padding:4.21vw 0 0 3.90vw;box-sizing: border-box;}
+#menu section:nth-child(2) a strong{color:#fff;font-size:4.68vw;font-weight: bold;display: block;margin-bottom:1.09vw;}
+#menu section:nth-child(2) a span{color:#017cb5;font-size:2.5vw;}
+#menu section:nth-child(2) a:nth-of-type(2){background:url(../images/menu-bg_08.jpg) no-repeat;background-size:100% 100%;}
+
+/*new开始*/
+#new{width:100%;height:14.06vw;display: flex;justify-content: space-around;align-items: center;background:#fff;}
+#new strong{background:url(../images/img01_03.jpg) no-repeat;background-size:100% 100%;width: 17.69vw;height: 4.21vw;text-indent: -9999px;}
+#new p{font-size:3.75vw;color:#1b1b1b;border-left:1px solid #e6e6e6;padding-left:2.34vw;}
+#new a{font-size:3.12vw;line-height:3.59vw;display: block;margin-top:1px;}
+#new a span{color: #808080;text-decoration: underline;}
+#new a i{display: block;color: #cccccc;float:right;}
+
+/*nav*/
+#nav{width:100%;height:29.84vw;background:#fff;margin-top:1.87vw;}
+#nav ul{height:100%;width:100%;display:flex;justify-content: space-around;align-items: center;}
+#nav ul a{height:100%;display: flex;flex-direction: column;align-items: center;font-size:3.43vw;color:#282828;}
+#nav ul a i{display: block;margin-bottom:5.46vw;font-size:10.81vw;color:#73adff;}
+
+#shouhou{height:11.56vw;width:100%;box-sizing: border-box;position: relative;}
+#shouhou .line{height:7.34vw;width:41.87vw;border-bottom:1px solid #e0e0e0;margin: 0 auto;}
+#shouhou a{display: block;background: #f4f4f4;font-size: 4.306vw;width: 25vw;margin: 0 auto;text-align: center;position: absolute;top:4.34vw;left: 50%;margin-left: -12.5vw;}
+
+
+#footer{width:100%;height:15.31vw;background:#fff;margin-top:1.87vw;border-top:1px solid #e0e0e0;position: fixed;bottom: 0;}
+#footer ul{height:100%;width:100%;display:flex;justify-content: space-around;align-items: center;}
+#footer ul a{height:100%;display: flex;flex-direction: column;align-items: center;font-size:3.43vw;color:#282828;position: relative;height:14.06vw;width:23.75vw;}
+#footer ul a:hover{background:#d9e3fa;border-radius:1.25vw;}
+#footer ul a i{display: block;margin-bottom:0vw;font-size:6.87vw;color:#808080;}
+#footer ul a span{display: block;background:#fc5b40;position: absolute;top:0vw;right:0vw;width:2.5vw;height:2.5vw;border-radius: 50%;}
+
+
+
+
+
+
+
+
+
