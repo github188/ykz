@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品详情</title>
+		<link rel="shortcut icon" href="images/title-1_03.png" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/details.css" />
+		<script type="text/javascript" src="jquery/jquery-1.12.3.js"></script>
+		<script type="text/javascript" src="js/jquery.cookie.js"></script>
+		<script type="text/javascript" src="js/js.js"></script>
+		<script type="text/javascript" src="js/details_js.js"></script>
+	</head>
+	<body>
+		<div id="menu">
+			<div class="menu_main gong">
+				<div class="menu-left">
+					<i class="iconfont">&#xe659;</i>
+					<span>深圳</span>
+					<a href="javascript:;">[切换城市]</a>
+				</div>
+				<div class="menu-center">
+					<p>您好<span></span> 欢迎来到舒适100网！<span></span></p>
+					<a href="logon.html">[登录]</a>
+					<a href="register.html">[注册]</a>
+				</div>
+				<ul class="list">
+					<li>
+						<span>我的舒适</span>
+						<i class="iconfont">&#xe65e;</i>
+						<ul class="list2">
+							<li>
+								<a href="#">我的舒适</a>
+								<i class="iconfont">&#xe65a;</i>
+							</li>
+							<li>
+								<a href="#">我的订单</a>
+							</li>
+							<li>
+								<a href="#">评价晒单</a>
+							</li>
+							<li>
+								<a href="#">我的问答</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<i class="iconfont">&#xe662;</i>
+						<a href="#"> 我的购物车</a>
+						<span>0</span>
+					</li>
+					<li>
+						<a href="#">招商加盟</a>
+					</li>
+					<li>
+						<span>服务电话：</span>
+						<span>4006-918-100</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="nav-wrapper">
+			<div class="nave gong">
+				<div class="logo">
+					<h1>
+						<a href="index.html" title="欢迎来到舒适100">舒适100</a>
+					</h1>
+				</div>
+				<div class="search">
+					<form>
+						<input type="text" placeholder="搜索关键词" />
+						<input type="button" />
+						<div class="button">
+							<i class="iconfont">&#xe664;</i>
+							<span>搜索</span>
+						</div>
+					</form>
+					<ul>
+						<li>
+							<a href="#">中央空调</a> /
+						</li>
+						<li>
+							<a href="#">地暖</a> /
+						</li>
+						<li>
+							<a href="#">暖气片</a> /
+						</li>
+						<li>
+							<a href="#">新风系统 </a> /
+						</li>
+						<li>
+							<a href="#">净水</a> /
+						</li>
+						<li>
+							<a href="#">工装项目</a>
+						</li>
+					</ul>
+					<div class="list3">
+						<p>
+							商品
+							<i class="iconfont">&#xe65e;</i>
+						</p>
+						<ul>
+							<li>
+								<a href="#">商品</a>
+							</li>
+							<li>
+								<a href="#">效果图展</a>
+							</li>
+							<li>
+								<a href="#">工程案例</a>
+							</li>
+							<li>
+								<a href="#">文章</a>
+							</li>
+							<li>
+								<a href="#">问答</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="er"></div>
+				<h2>
+					<i class="iconfont">&#xe7d5;</i>
+					<span>舒适商品分类</span>
+					<i class="iconfont j">&#xe609;</i>
+				</h2>
+				<ul class="product-list">
+					<li>
+						<h4>舒适温度<i class="iconfont">&#xe620;</i></h4>
+						<a href="#">中央空调</a>|
+						<a href="#">风管机</a><br />
+						<a href="#">暖气片</a>|
+						<a href="#">地暖</a>
+					</li>
+					<li>
+						<h4>清洁空气<i class="iconfont">&#xe620;</i></h4>
+						<a href="#">新风系统</a>|
+						<a href="#">中央除尘</a><br />
+					</li>
+					<li>
+						<h4>健康水源<i class="iconfont">&#xe620;</i></h4>
+						<a href="#">中央净水</a>|
+						<a href="#">中央热水</a><br />
+						<a href="#">太阳能</a>|
+					</li>
+					<li>
+						<h4>智能家居<i class="iconfont">&#xe620;</i></h4>
+						<a href="#">私人影院</a>|
+						<a href="#">背景音乐</a><br />
+						<a href="#">监控安防</a>|
+						<a href="#">灯光窗帘</a>
+					</li>
+					<li>
+						<h4>辅材安装<i class="iconfont">&#xe620;</i></h4>
+						<a href="#">安装包</a>|
+						<a href="#">辅材包</a><br />
+					</li>
+				</ul>
+				<div class="product-list-right Li1">
+					<div class="pl-top">
+						<h3>系统类别</h3>
+						<a href="#">中央空调</a>|
+						<a href="#">暖气片</a>|
+						<a href="#">地暖</a>|
+						<a href="#">风管机</a>|
+						<a href="#">水暖床垫</a>|
+						<a href="#">地源热泵</a>
+					</div>
+					<div class="pl-middle">
+						<h3>推荐品牌</h3>
+						<a href="#">麦克维尔</a>|
+						<a href="#">松下</a>|
+						<a href="#">TCL</a>|
+						<a href="#">三菱重工</a>|
+						<a href="#">LG</a>|
+						<a href="#">特灵</a>|
+						<a href="#">德地氏</a>|
+						<a href="#">庆东纳碧安</a>|
+						<a href="#">雅克菲</a>|
+						<a href="#">德美拉得</a>
+					</div>
+					<div class="pl-bottom">
+						<a href="#">
+							<img src="images/113802-P0yktzVU.jpg" />
+						</a>
+						<a href="#">
+							<img src="images/135915-mFVxtL_B.jpg" />
+						</a>
+						<a href="#">
+							<img src="images/114454-3FH8N9yE.jpg" />
+						</a>
+					</div>
+				</div>
+				<div class="product-list-right Li2">
+					<div class="pl-top">
+						<h3>系统类别</h3>
+						<a href="#">全热交换器 </a>|
+						<a href="#">暖气片</a>|
+						<a href="#">壁挂式新风</a>|
+						<a href="#">壁挂式新风</a>|
+						<a href="#">空气净化器</a>
+					</div>
+					<div class="pl-middle">
+						<h3>推荐品牌</h3>
+						<a href="#">松下</a>|
+						<a href="#">TCL</a>|
+						<a href="#">三菱重工</a>
+					</div>
+					<div class="pl-bottom">
+						<a href="#">
+							<img src="images/164507-PShV5aD4.jpg" />
+						</a>
+						<a href="#">
+							<img src="images/164614-E6DJjW-T.jpg" />
+						</a>
+					</div>
+				</div>
+				<div class="product-list-right Li3">
+					<div class="pl-top">
+						<h3>系统类别</h3>
+						<a href="#">前置过滤器</a>|
+						<a href="#">中央净水器</a>|
+						<a href="#">中央软水机</a>|
+						<a href="#">直饮机</a>|
+						<a href="#">中央热水</a>|
+						<a href="#">太阳能</a>
+					</div>
+					<div class="pl-middle">
+						<h3>推荐品牌</h3>
+						<a href="#">恩美特</a>|
+						<a href="#">捷森</a>|
+						<a href="#">海林</a>|
+						<a href="#">瑞美</a>
+					</div>
+					<div class="pl-bottom">
+						<a href="#">
+							<img src="images/162913-6-an7ECy.jpg" />
+						</a>
+					</div>
+				</div>
+				<div class="product-list-right Li4">
+					<div class="pl-top">
+						<h3>系统类别</h3>
+						<a href="#">监控保全</a>|
+						<a href="#">安防报警</a>|
+						<a href="#">门禁对讲</a>|
+						<a href="#">智能灯光</a>|
+						<a href="#">智能窗帘</a>|
+						<a href="#">环境侦控</a>|
+						<a href="#">私人影院</a>|
+						<a href="#">背景音乐</a>
+					</div>
+					<div class="pl-middle">
+						<h3>推荐品牌</h3>
+						<a href="#">Control 4</a>
+					</div>
+					<div class="pl-bottom">
+						<a href="#">
+							<img src="images/175338-iFDMvZ_z.jpg" />
+						</a>
+						<a href="#">
+							<img src="images/175741-RCdQLoZ0.jpg" />
+						</a>
+					</div>
+				</div>
+				<div class="product-list-right Li5">
+					<div class="pl-top">
+						<h3>系统类别</h3>
+						<a href="#">安装包</a>|
+						<a href="#">辅材包</a>
+					</div>
+					<div class="pl-middle">
+						<h3>推荐品牌</h3>
+						<a href="#">热德</a>
+					</div>
+					<div class="pl-bottom">
+						<a href="#">
+							<img src="images/185057-27UE8Qca.jpg" />
+						</a>
+						<a href="#">
+							<img src="images/185214-hwYVDgR6.jpg" />
+						</a>
+					</div>
+				</div>
+
+				<ul class="nave-bottom">
+					<li>
+						<a href="index.html">首 页</a>
+					</li>
+					<li>
+						<a href="#">舒适商城</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>方案与报价</span>
+							<i class="iconfont">&#xe65e;</i>
+						</a>
+						<ul>
+							<li>
+								<a href="#">免费设计方案</a>
+							</li>
+							<li>
+								<a href="#">一分钟报价</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">
+							<span>帮选购</span>
+							<i class="iconfont">&#xe65e;</i>
+						</a>
+						<ul>
+							<li>
+								<a href="#">舒适问答</a>
+							</li>
+							<li>
+								<a href="#">学知识</a>
+							</li>
+							<li>
+								<a href="#">看工地</a>
+							</li>
+							<li>
+								<a href="#">效果图</a>
+							</li>
+							<li>
+								<a href="#">样板房</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">全国服务中心</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--详情页主体部分-->
+		
+		<div id="main-wrapper">
+			<div class="title-nave gong">
+				<ul>
+					<li>
+						<a href="javascript:;">首页<i class="iconfont">&#xe690;</i></a>
+					</li>
+					<li>
+						<a href="javascript:;">舒适商城<i class="iconfont">&#xe690;</i></a>
+					</li>
+					<li>
+						<a href="javascript:;">舒适温度<i class="iconfont">&#xe690;</i></a>
+					</li>
+					<li>
+						<a href="javascript:;">中央空调<i class="iconfont">&#xe690;</i></a>
+					</li>
+					<li>
+						<a href="javascript:;">套餐<i class="iconfont">&#xe690;</i></a>
+					</li>
+					<li>
+						<a href="javascript:;">商品详情</a>
+					</li>
+				</ul>
+			</div>
+			<div class="details-content gong">
+				<div class="sp-img">
+					<dl>
+						<dt>
+							<img src="" />
+							<div class="min-box"></div>
+						</dt>
+						<dd>
+							<i></i>
+							<ul>
+								<li>
+									<img src="" />
+								</li>
+							</ul>
+							<i></i>
+						</dd>
+					</dl>
+					<div class="big-box">
+						<img src="" />
+					</div>
+				</div>
+				<div class="details-text">
+					<ul>
+						<li>
+							<h2></h2>
+							<p></p>
+						</li>
+						<li>
+							<p></p>
+							<p><i></i>4006-918-100<span>来电咨询可享受更多优惠</span></p>
+							<span class="sold">已售<i>54</i>件<br />评价<i>23</i>次</span>
+						</li>
+						<li>
+							<div class="details-left">
+								<p>
+									配 送 至：
+									<select>
+										<option>广东深圳</option>
+										<option>广东东莞</option>
+										<option>广东广州</option>
+										<option>广东珠海</option>
+									</select>
+									有货
+								</p>
+								<div class="amount">
+									<p>1</p>
+									<a href="javascript:;">
+										<i></i>
+									</a>
+									<a href="javascript:;">
+										<i></i>
+									</a>
+								</div>
+								<a href="javascript:;" class="buy">立即购买</a>
+								<a href="javascript:;" class="cart">加入购物车</a>
+								<span class="cart-text">加入购物车成功</span>
+								<p>说明：购买套餐更省心，此价格包含产品、设计、配送、辅材、安装、售后费用</p>
+							</div>
+							<div class="details-right">
+								<a href="javascript:;">
+									<span></span>
+									<span>联系客服</span>
+								</a>
+								<a href="javascript:;">
+									<i></i>
+									分享
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>		
+		<div id="goods-detail-wrapper">
+			<div class="goods-detail-nav gong">
+				<ul>
+					<li>
+						<a href="javascript:;" class="active">详情介绍</a>
+					</li>
+					<li>
+						<a href="javascript:;">规格参数</a>
+					</li>
+					<li>
+						<a href="javascript:;">用户评价<span>（40）</span></a>
+					</li>
+					<li>
+						<a href="javascript:;">常见问题</a>
+					</li>
+				</ul>
+				<a href="javascript:;" class="shoppingcart">加入购物车</a>
+				<span class="sc-text">加入购物车成功</span>
+			</div>
+		</div>
+		<div class="details-main gong">
+			<div id="detailpage">
+				<img src="images/details-images/1493803570-7658149773555658.jpg" />
+				<img src="images/details-images/1467084413-4399063862275480.jpg" />
+				<img src="images/details-images/1484290278-4783578148699364.jpg" />
+				<img src="images/details-images/1467084428-3171676803354600.jpg" />
+				<img src="images/details-images/1467084429-2963745567502420.jpg" />
+				<img src="images/details-images/1467084433-9328952292153948.jpg" />
+				<img src="images/details-images/1467084435-3608400454804856.jpg" />
+				<img src="images/details-images/1467084438-6910670326865377.jpg" />
+				<img src="images/details-images/1467084443-7096963986309417.jpg" />
+				<img src="images/details-images/1467084449-7954334711431356.jpg" />
+				<img src="images/details-images/1467084450-5797114345675195.jpg" />
+				<img src="images/details-images/1467084454-8963094345905710.jpg" />
+				<img src="images/details-images/1493803584-5963981702355509.jpg" />
+				<img src="images/details-images/1484290332-8175354396147483.jpg" />
+			</div>
+			<div id="norms">
+				<img src="images/details-images/1467081162-9993145098522820.png" />
+				<img src="images/details-images/1467081176-2544659349113321.png" />
+			</div>
+			<div id="evaluation">
+				<img src="images/details-images/evaluation.jpg" />
+			</div>
+			<div id="question">
+				<img src="images/details-images/question.jpg" />
+			</div>
+		</div>	
+			
+		<!--详情页主体部分结束-->
+		<div id="foot-nav">
+			<ul class="gong">
+				<li>
+					<a href="javascript:;">
+						<i></i>
+						<p>免费设计</p>
+						<p>专业设计师量身定制</p>
+						<span></span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i></i>
+						<p>集成服务</p>
+						<p>八大舒适家居系统 </p>
+						<span></span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i></i>
+						<p>舒适工长</p>
+						<p>过程我担当 效果你来评 </p>
+						<span></span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i></i>
+						<p>在线监理</p>
+						<p>手机看工地 省时省心 </p>
+						<span></span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i></i>
+						<p>百万用户</p>
+						<p>放心的舒适选择  </p>
+						<span></span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i></i>
+						<p>工程保险</p>
+						<p>13万元平安理赔</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div id="service" class="gong">
+			<ul>
+				<li>
+					<dl>
+						<dt>如何订购</dt>
+						<dd>
+							<a href="javascript:;">注册新用户</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">了解舒适家居系统</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">服务流程</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">常见问题解答</a>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>免费设计</dt>
+						<dd>
+							<a href="javascript:;">免费获取方案设计</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">一分钟快速报价</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">电话预约</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">在线咨询预约</a>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>安全保障</dt>
+						<dd>
+							<a href="javascript:;">价格透明</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">规范安装</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">舒适100 APP</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">平安理赔工程保</a>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>关于我们</dt>
+						<dd>
+							<a href="javascript:;">全国线下体验店</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">全国设计中心</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">全国培训中心</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">舒适家居电商先河</a>
+						</dd>
+					</dl>
+				</li>
+			</ul>
+			<div class="service-right">
+				<div class="telephone">
+					<strong>4006-918-100</strong>
+					<span>4000-660-918</span>
+					<p>周一至周日 9：00-20：00</p>
+					<a href="javascript:;">
+						<i></i>
+						<span>7*12小时在线客服</span>
+					</a>
+				</div>
+				<div class="fr">
+					<img src="images/mcode.jpg" />
+					<p>舒适100手机版</p>
+				</div>
+				<div class="weixing">
+					<img src="images/bcode.jpg" />
+					<p>扫微信享最新优惠</p>
+				</div>
+			</div>
+		</div>
+		<div id="footer-wrapper">
+			<div class="footer gong">
+				<ul>
+					<li>
+						<a href="javascript:;">资讯中心</a>|
+					</li>
+					<li>
+						<a href="javascript:;">文章专栏</a>|
+					</li>
+					<li>
+						<a href="javascript:;">关于我们</a>|
+					</li>
+					<li>
+						<a href="javascript:;">联系我们</a>|
+					</li>
+					<li>
+						<a href="javascript:;">招商加盟</a>|
+					</li>
+					<li>
+						<a href="javascript:;">商务合作</a>|
+					</li>
+					<li>
+						<a href="javascript:;">帮助中心</a>|
+					</li>
+					<li>
+						<a href="javascript:;">专家答疑</a>
+					</li>
+				</ul>
+				<ul>
+					<li></li>
+					<li>
+						<a href="javascript:;"></a>
+					</li>
+					<li>
+						<a href="javascript:;"></a>
+					</li>
+					<li>
+						<a href="javascript:;"></a>
+					</li>
+				</ul>
+				<a href="javascript:;" class="link-110">
+					<i></i>
+					鄂公网安备 42010202000222号
+				</a>
+				<p>Copyright©2009-2017  武汉舒适易佰科技有限公司  版权所有</p>
+			</div>
+		</div>
+		<div id="right-nave">
+			<ul>
+				<li>
+					<a href="javascript:;">
+						<img src="images/lwx_online_spread1.png" />
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="images/lwx_online_spread2.png" />
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="images/lwx_online_spread3.png" />
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="images/lwx_online_spread4.png" />
+					</a>
+				</li>
+				<li>
+					<img src="images/lwx_online_spread5.png" />
+				</li>
+				<li>
+					<img src="images/lwx_online_spread6.png" />
+				</li>
+			</ul>
+		</div>
+		<div id="right-nave-min">
+			<ul>
+				<li>
+					<img src="images/lwx_online_retract1.png" />
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="images/lwx_online_retract2.png" />
+					</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

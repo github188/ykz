@@ -1,0 +1,33 @@
+
+/*右侧列表*/
+.register-list{width: 436px;height: 432px;border: 1px solid #d2d2d2;float: right;margin-top: 70px;padding: 20px 0 20px 40px;}
+.register-list h2{font-size: 26px;height: 52px;line-height: 52px;margin-bottom: 15px;color: #333333;}
+.register-list span{font-size: 16px;color: #333333;display:block;width: 100px;height: 34px;float: left;line-height: 34px;}
+.register-list span i{color: #ff0000;}
+.register-list input{width: 262px;height: 16px;border: 1px solid #bbbbbb;padding: 8px;float: left;}
+.register-list .box:nth-of-type(2) input:nth-of-type(1){width: 150px;height: 34px;box-sizing: border-box;margin-right: 12px;}
+.register-list .box:nth-of-type(2) input:nth-of-type(2){width: 118px;height: 34px;line-height: 34px;text-align: center;background: #ff740b;color: #fff;box-sizing: border-box;border: 0;border-radius: 4px;padding: 0;}
+
+.register-list .checked{padding: 0;width: 12px;height: 12px;box-sizing: border-box;margin-left: 104px;margin-bottom: 14px;}
+.register-list .sub{padding: 0;width: 280px;height: 35px;background: #ff5500;color: #fff;border: 0;line-height: 35px;text-align: center;margin-left: 100px;font-size: 14px;}
+
+.register-list p{float: left;margin-bottom: 14px;}
+
+.box{float: left;width: 320px;height: 56px;}
+.box p{float: initial;margin-bottom: 0;margin-top: 34px;color: #ff5500;}
+
+.register-list .name{margin-bottom: 26px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

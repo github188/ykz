@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script type="text/javascript" src="js/ajax.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/jiazai.js"></script>
+		<script type="text/javascript" src="js/plane.js"></script>
+		<script type="text/javascript" src="js/bullet.js"></script>
+		<script type="text/javascript" src="js/bigfire.js"></script>
+		<script type="text/javascript" src="js/enemy.js"></script>
+		<script>
+			onload = function(){
+				var oBox = document.getElementById("mian");
+				var oBox1 = document.getElementById("box1");
+				var oList = document.getElementById("list");
+				var aLi = oList.getElementsByTagName("li");
+				var oPlane = document.getElementById("plane");
+				
+				oBox1.onclick = function(){
+					oBox.style.background = "url(images/bg1.jpg)";
+					oList.style.display = "block";
+					oBox1.parentNode.removeChild(oBox1);
+				}
+				
+				for(var i=0; i<aLi.length; i++){
+					aLi[i].onclick = function(){
+						//移除oList
+						oList.parentNode.removeChild(oList);
+						oPlane.style.display = "block";
+						var log = document.createElement("div");
+						log.className = "logo";
+						oBox.appendChild(log);
+						
+						var size = document.createElement("div");
+						size.className = "size";
+						size.innerHTML = "请选择飞机";
+						oBox.appendChild(size);
+						
+						//难度选项
+						myPlane.fireInterval = this.value;
+						
+						//创建飞机选项
+						for(var j=0; j<5; j++){
+							var plane = document.createElement("li");
+							oPlane.appendChild(plane);
+							plane.style.background = "url(images/own"+ (j+1) +".png)"
+						}
+						var aLi2 = oPlane.getElementsByTagName("li");
+						
+						for(var e=0; e<aLi2.length; e++){
+							aLi2[e].index = e+1;
+							
+							aLi2[e].onclick = function(){
+								oBox.removeChild(log);
+								oBox.removeChild(size);
+								oPlane.parentNode.removeChild(oPlane);
+								
+								//加载游戏
+								jiaZai.init().start(this.index);
+								
+								
+							}
+						}
+					}
+				}
+				
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="mian">
+			<ul id="list">
+				<li value="900">超级困难</li>
+				<li value="700">非常困难</li>
+				<li value="400">比较困难</li>
+				<li value="200">春哥附体</li>
+			</ul>
+			<div id="box1">开始游戏</div>
+			<ul id="plane"></ul>
+		</div>
+	</body>
+</html>

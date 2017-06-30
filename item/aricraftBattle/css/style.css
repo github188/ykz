@@ -1,0 +1,55 @@
+
+/*主页面样式*/
+html,body{width: 100%;height: 100%;overflow: hidden;}
+#mian{width:320px;height: 100%;background: url(../images/ks.jpg) repeat-y;margin: 0 auto;position: relative;background-size: 100% 100%;}
+#box1{width: 150px;height: 40px;background:#FFA500;border-radius: 20px;color: #fff;line-height: 40px;text-align: center;cursor: pointer;position: absolute;left: 50%;margin-left: -75px;bottom: 10%;margin-bottom: -20px;}
+#list{position: absolute;top:0;left:0;right:0;bottom:0;margin: auto;width: 150px;height: 240px;display: none;}
+#list li{width: 150px;height: 40px;line-height: 40px;text-align: center;background:#FFA500;color: #fff;margin-bottom: 20px;border-radius: 20px;cursor: pointer;}
+
+/*加载游戏界面*/
+.box2{width: 150px;height: 40px;background: #FF6801;color: #fff;border-radius: 20px;line-height: 40px;text-align: center;position: absolute;left: 50%;margin-left: -75px;top: 50%;margin-top: -75px;}
+
+/*logo*/
+.logo{width: 250px;height: 78px;background: url(../images/logo.png) no-repeat;position: absolute;top: 10px;background-size: 100% 100%;left: 50%;margin-left:-125px;}
+
+/*选择飞机*/
+
+.size{background: #FF6801;width: 150px; height: 40px;line-height: 40px;color: #FFFFFF;font-size: 20px;border-radius: 20px;text-align: center;position: absolute;left: 50%;margin-left: -75px;top: 88px;}
+#plane{position: absolute;top: 130px; left: 50%;width: 66px; margin-left: -33px;display: none;}
+#plane li{width: 66px;height: 80px;margin: 0 auto;cursor: pointer;}
+
+/*创建飞机*/
+.myplane{width: 66px;height: 80px;position: absolute;cursor: pointer;}
+
+
+/*子弹样式*/
+.bullet1{width: 15px;height: 30px;background: url(../images/bimg_bullet.png) no-repeat;position: absolute;}
+.bullet2{width: 53px;height: 121px;background: url(../images/wp3.png) no-repeat;position: absolute;}
+
+/*敌机的大小*/
+/*大型飞机*/
+.enemybig{width: 110px;height: 164px;background: url(../images/dafeiji.png) no-repeat;position:absolute;}
+
+/*中1型飞机*/
+.enemymiddle1{width: 90px;height: 81px;background: url(../images/xiaozhong.png) no-repeat;position:absolute;}
+
+/*中2型飞机*/
+.enemymiddle2{width: 46px;height: 60px;background: url(../images/zhongfeiji.png) no-repeat;position:absolute;}
+
+/*小型飞机*/
+.enemysmall{width: 34px;height: 34px;background: url(../images/xiaofeiji.png) no-repeat;position:absolute;}
+
+/*子弹爆炸*/
+.bomb{width: 64px;height: 64px;background: url(../images/ownbz.png) no-repeat;position: absolute;}
+
+/*游戏结束*/
+.gameOvet{width: 150px;height: 40px;background: #FFA500;color: #fff;line-height: 40px;text-align: center;font-size: 20px;position: absolute;left: 50%;margin-left: -75px;top: 50%;margin-top:-50px;border-radius: 20px;z-index: 1;}
+.score{width: 150px;height: 40px;background: #FFA500;color: #fff;line-height: 40px;text-align: center;position: absolute;left: 50%;margin-left: -75px;top: 50%;margin-top:10px;border-radius: 20px;z-index: 1;}
+
+/*火力转换*/
+.bigfire{width: 34px;height: 34px;background: url(../images/zb1.png) no-repeat;position: absolute;}
+
+
+
+
+

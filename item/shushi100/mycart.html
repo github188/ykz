@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的购物车</title>
+		<link rel="shortcut icon" href="images/title-1_03.png" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/title_footer.css" />
+		<link rel="stylesheet" type="text/css" href="css/mycart.css" />
+		<script type="text/javascript" src="jquery/jquery-1.12.3.js"></script>
+		<script type="text/javascript" src="js/jquery.cookie.js"></script>
+		<script type="text/javascript" src="js/js.js"></script>
+		<script type="text/javascript" src="js/mycart.js"></script>
+	</head>
+	<body>
+		<div id="menu">
+			<div class="menu_main gong">
+				<div class="menu-left">
+					<i class="iconfont">&#xe659;</i>
+					<span>深圳</span>
+					<a href="javascript:;">[切换城市]</a>
+				</div>
+				<div class="menu-center">
+					<p>您好 欢迎来到舒适100网！</p>
+					<a href="javascript:;">[登入]</a>
+					<a href="javascript:;">[注册]</a>
+				</div>
+				<ul class="list">
+					<li>
+						<span>我的舒适</span>
+						<i class="iconfont">&#xe65e;</i>
+						<ul class="list2">
+							<li>
+								<a href="#">我的舒适</a>
+								<i class="iconfont">&#xe65a;</i>
+							</li>
+							<li>
+								<a href="#">我的订单</a>
+							</li>
+							<li>
+								<a href="#">评价晒单</a>
+							</li>
+							<li>
+								<a href="#">我的问答</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<i class="iconfont">&#xe662;</i>
+						<a href="#"> 我的购物车</a>
+						<span>0</span>
+					</li>
+					<li>
+						<a href="#">招商加盟</a>
+					</li>
+					<li>
+						<span>服务电话：</span>
+						<span>4006-918-100</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="nav-wrapper">
+			<div class="nave gong">
+				<div class="logo">
+					<h1>
+						<a href="index.html" title="欢迎来到舒适100">舒适100</a>
+					</h1>
+				</div>
+				<p>我的购物车</p>
+			</div>
+		</div>		
+		<!--详情页主体部分-->
+		<div id="list">
+			<div id="nothing-wrapper">
+				<div id="nothing">
+					<i>
+						<img src="images/mycart-images/empty_cart.png" />
+					</i>
+					<p>购物车暂无商品,请继续
+						<a href="index.html">选购</a>
+					</p>
+				</div>
+			</div>
+			<dl class="shopping-list gong">
+				<dt>
+					<ul>
+						<li>
+							<i></i>
+							<input type="checkbox" checked="checked" />
+							<span>全选</span>
+						</li>
+						<li>
+							商品名称
+						</li>
+						<li>
+							单价
+						</li>
+						<li>
+							数量
+						</li>
+						<li>
+							小计
+						</li>
+						<li>
+							操作
+						</li>
+					</ul>
+				</dt>
+			</dl>
+			<div id="close" class="gong">
+				<a href="javascript:;">继续购物</a>
+				<strong>共<span>1</span>组商品</strong>
+				<strong>已选择<span>1</span>组商品</strong>
+				<a href="javascript:;">去结算</a>
+				<strong>合计（不含运费）：<span></span></strong>
+			</div>
+		</div>
+			
+		<!--详情页主体部分结束-->
+		<div id="foot-nav">
+			<ul class="gong">
+				<li>
+					<a href="javascript:;">
+						<i></i>
+						<p>免费设计</p>
+						<p>专业设计师量身定制</p>
+						<span></span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i></i>
+						<p>集成服务</p>
+						<p>八大舒适家居系统 </p>
+						<span></span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i></i>
+						<p>舒适工长</p>
+						<p>过程我担当 效果你来评 </p>
+						<span></span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i></i>
+						<p>在线监理</p>
+						<p>手机看工地 省时省心 </p>
+						<span></span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i></i>
+						<p>百万用户</p>
+						<p>放心的舒适选择  </p>
+						<span></span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i></i>
+						<p>工程保险</p>
+						<p>13万元平安理赔</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div id="service" class="gong">
+			<ul>
+				<li>
+					<dl>
+						<dt>如何订购</dt>
+						<dd>
+							<a href="javascript:;">注册新用户</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">了解舒适家居系统</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">服务流程</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">常见问题解答</a>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>免费设计</dt>
+						<dd>
+							<a href="javascript:;">免费获取方案设计</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">一分钟快速报价</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">电话预约</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">在线咨询预约</a>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>安全保障</dt>
+						<dd>
+							<a href="javascript:;">价格透明</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">规范安装</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">舒适100 APP</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">平安理赔工程保</a>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>关于我们</dt>
+						<dd>
+							<a href="javascript:;">全国线下体验店</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">全国设计中心</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">全国培训中心</a>
+						</dd>
+						<dd>
+							<a href="javascript:;">舒适家居电商先河</a>
+						</dd>
+					</dl>
+				</li>
+			</ul>
+			<div class="service-right">
+				<div class="telephone">
+					<strong>4006-918-100</strong>
+					<span>4000-660-918</span>
+					<p>周一至周日 9：00-20：00</p>
+					<a href="javascript:;">
+						<i></i>
+						<span>7*12小时在线客服</span>
+					</a>
+				</div>
+				<div class="fr">
+					<img src="images/mcode.jpg" />
+					<p>舒适100手机版</p>
+				</div>
+				<div class="weixing">
+					<img src="images/bcode.jpg" />
+					<p>扫微信享最新优惠</p>
+				</div>
+			</div>
+		</div>
+		<div id="footer-wrapper">
+			<div class="footer gong">
+				<ul>
+					<li>
+						<a href="javascript:;">资讯中心</a>|
+					</li>
+					<li>
+						<a href="javascript:;">文章专栏</a>|
+					</li>
+					<li>
+						<a href="javascript:;">关于我们</a>|
+					</li>
+					<li>
+						<a href="javascript:;">联系我们</a>|
+					</li>
+					<li>
+						<a href="javascript:;">招商加盟</a>|
+					</li>
+					<li>
+						<a href="javascript:;">商务合作</a>|
+					</li>
+					<li>
+						<a href="javascript:;">帮助中心</a>|
+					</li>
+					<li>
+						<a href="javascript:;">专家答疑</a>
+					</li>
+				</ul>
+				<ul>
+					<li></li>
+					<li>
+						<a href="javascript:;"></a>
+					</li>
+					<li>
+						<a href="javascript:;"></a>
+					</li>
+					<li>
+						<a href="javascript:;"></a>
+					</li>
+				</ul>
+				<a href="javascript:;" class="link-110">
+					<i></i>
+					鄂公网安备 42010202000222号
+				</a>
+				<p>Copyright©2009-2017  武汉舒适易佰科技有限公司  版权所有</p>
+			</div>
+		</div>
+		<div id="right-nave">
+			<ul>
+				<li>
+					<a href="javascript:;">
+						<img src="images/lwx_online_spread1.png" />
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="images/lwx_online_spread2.png" />
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="images/lwx_online_spread3.png" />
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="images/lwx_online_spread4.png" />
+					</a>
+				</li>
+				<li>
+					<img src="images/lwx_online_spread5.png" />
+				</li>
+				<li>
+					<img src="images/lwx_online_spread6.png" />
+				</li>
+			</ul>
+		</div>
+		<div id="right-nave-min">
+			<ul>
+				<li>
+					<img src="images/lwx_online_retract1.png" />
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="images/lwx_online_retract2.png" />
+					</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,59 @@
+
+/*主体导航*/
+#nav-wrapper{width: 100%;height: 120px;border-bottom: 4px solid #108bee;background: #fff;}
+#nav-wrapper .nave{height: 120px;background: #fff;overflow: hidden;}
+/*logo*/
+.logo{width: 200px; height: 54px;background: url(../images/mycart-images/authentication.png) no-repeat;margin-top: 30px;float: left;}
+.logo a{display: block;width: 200px; height: 54px;text-indent: -99999px;}
+
+.nave p{font-size: 28px;margin-top: 41px;}
+/*导航结束*/
+
+/*主体开始*/
+/*没有商品时显示的状态  开始*/
+#nothing-wrapper{background: #fff;width: 100%;height: 240px;margin: 32px auto 50px auto;display:none}
+#nothing{padding: 70px 0px;height: 100px;position:relative;left:526px;}
+#nothing i{float: left;margin-right: 25px;}
+#nothing i img{display: block;}
+#nothing p{font-size: 20px;margin-top: 20px;line-height: 40px;}
+#nothing p a{color: #ff5552;}
+/*没有商品时显示的状态  结束*/
+.shopping-list{margin-top: 10px;}
+.shopping-list dt{background: #fff;margin-bottom: 10px;padding: 20px 40px 20px 20px;height: 22px;}
+.shopping-list dt ul li{float: left;font-size: 14px;height: 22px;line-height: 22px;text-align: center;width: 150px;}
+.shopping-list dt ul li input{width: 20px;height: 20px;box-sizing: border-box;background: #fff;border: 1px solid #ff5501;color: #fff;margin-top: 0px;float: left;margin-left: 0;margin-right: 10px;margin-top: 1px;}
+.shopping-list dt ul li i{display: block;width: 20px;height: 20px;background: #fff url(../images/mycart-images/cart-icon.png) 0px -37px no-repeat;position: absolute;margin-top: 1px;}
+.shopping-list dt ul li:nth-of-type(1){width: 220px;text-align: left;}
+.shopping-list dt ul li:nth-of-type(2){width: 320px;}
+
+.shopping-list dd{background: #fff;margin-bottom: 10px;overflow: hidden;}
+.shopping-list .top{height: 20px;border-bottom: 1px solid #d2d2d2;font-size: 14px;padding: 20px 40px 20px 20px;}
+.shopping-list .top i{display: block;width: 20px;height: 20px;background: #fff url(../images/mycart-images/cart-icon.png) 0px -37px no-repeat;position: absolute;}
+.shopping-list .top p{float: left;color: #666666;}
+.shopping-list .top input{width: 20px;height: 20px;box-sizing: border-box;background: #fff;border: 1px solid #ff5501;color: #fff;margin-top: 0px;float: left;margin-left: 0;margin-right: 10px;margin-top: 1px;}
+
+.shopping-list dd ul{margin:30px 40px 0 40px;overflow: hidden;border-bottom: 1px dashed #d1d1d1;}
+.shopping-list dd ul li img{display: block;width: 120px;height: 120px;}
+.shopping-list dd ul li{float: left;font-size: 14px;height: 120px;text-align: center;width: 150px;color: #666666;}
+.shopping-list dd ul li:nth-of-type(1){width: 200px;text-align: left;}
+.shopping-list dd ul li:nth-of-type(2){width: 280px;padding: 0 20px;padding-top: 38px;}
+.shopping-list dd ul li:nth-of-type(2) a{display: block;float: left;height: 44px;line-height: 22px;text-align: left;color: #666666;}
+.shopping-list dd ul li:nth-of-type(4){padding-top: 49px;box-sizing: border-box;}
+.shopping-list dd ul li:nth-of-type(4) a{display: inline-block;width: 11px;height: 20px;border:1px solid #d3d3d3;}
+.shopping-list dd ul li:nth-of-type(4) p{display: inline-block;width: 45px;height: 20px;border:1px solid #d3d3d3;border-left: 0;border-right: 0;font-size: 12px;line-height: 20px;}
+.shopping-list dd ul li:nth-of-type(3),.shopping-list dd ul li:nth-of-type(5),.shopping-list dd ul li:nth-of-type(6){line-height: 120px;}
+.shopping-list dd ul li:nth-of-type(5){color: #ff5500;}
+
+.shopping-list .bottom{padding: 0 40px;height: 61px;}
+.shopping-list .bottom a{float: right;font-size: 16px;color: #ff5500;height: 20px;line-height: 20px;margin-top: 21px;margin-left: 24px;}
+.shopping-list .bottom a i{display:block;width: 20px;height: 20px;background: url(../images/mycart-images/cart-icon.png) -56px -37px no-repeat;float: left;}
+
+#close{background: #fff;height: 110px;margin-bottom: 39px;padding: 30px 30px 30px 45px;box-sizing: border-box;font-size: 14px;}
+#close a:nth-of-type(1){float: left;display: block;width: 128px;height: 38px;border: 1px solid #d2d2d2;color: #666666;line-height: 38px;text-align: center;font-size: 16px;margin-right: 45px;}
+#close a:nth-of-type(2){float: right;display: block;width: 156px;height: 47px;color: #fff;background: #ff5500;text-align: center;line-height: 47px;font-size: 20px;}
+
+#close strong{display: block;float: left;height: 38px;line-height: 38px;color: #666666;margin-right: 46px;}
+#close strong span{color: #ff5500;}
+#close strong:nth-of-type(3){float: right;margin-right: 34px;}
+#close strong:nth-of-type(3) span{font-size: 28px;}
+#close strong:nth-of-type(3) span span{font-size: 14px;}

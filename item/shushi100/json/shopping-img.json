@@ -1,0 +1,231 @@
+[
+	{
+		"shoppingBnner":[
+			{
+				"id":106,
+				"title":"麦克维尔MAC-A+变频系列中央空调家用套餐 三房两厅130㎡",
+				"img":"images/sp-banner-08.jpg",
+				"unit":"￥",
+				"price":43500.00
+			},
+			{
+				"id":107,
+				"title":"三菱重工直流变频KX6-Q系列中央空调家用套餐 三房两厅130㎡ 一拖五",
+				"img":"images/sp-banner-09.jpg",
+				"unit":"￥",
+				"price":47888.00
+			},
+			{
+				"id":108,
+				"title":"德地氏MCR-P 24/28 MI系列家用采暖水地暖(130-155㎡适用... ",
+				"img":"images/sp-banner-10.jpg",
+				"unit":"￥",
+				"price":28130.00
+			}
+		],
+		"shoppinglist":[
+			{
+				"id":101,
+				"title":"三菱重工直流变频KX6-Q系列中央空调家用套餐 三房两厅130...",
+				"title2":"三菱重工直流变频KX6-Q系列中央空调家用套餐 三房两厅130㎡ 一拖五",
+				"referral":"采用先进的直流变频压缩机 真正省电 静音运行",
+				"img":["images/sp-banner-01.jpg"],
+				"unit":"￥",
+				"price":47888.00,
+				"spIndex":0
+			},
+			{
+				"id":102,
+				"title":"特灵中央空调水系统－三房两厅130㎡家用套餐系列",
+				"title2":"特灵中央空调水系统－三房两厅130㎡家用套餐系列",
+				"referral":"出风柔和不干燥 舒适度高 给你星级恒温的享受",
+				"img":["images/sp-banner-02.jpg","images/sp-banner-07.jpg"],
+				"unit":"￥",
+				"price":48540.00,
+				"spIndex":0
+			},
+			{
+				"id":103,
+				"title":"庆东纳碧安Navien ACE-24KS系列  家用采暖水地暖（110-1... ",
+				"title2":"庆东纳碧安Navien ACE-24KS系列 家用采暖水地暖（110-130㎡适用于三室两厅）",
+				"referral":"韩国原装进口壁挂炉 不锈钢热交换器 热效率高 使用寿命更长",
+				"img":["images/sp-banner-03.jpg"],
+				"unit":"￥",
+				"price":17880.00,
+				"spIndex":0
+			},
+			{
+				"id":104,
+				"title":"德地氏MCR-P 24/28 MI系列家用采暖水地暖(130-155㎡适用... ",
+				"title2":"德地氏MCR-P 24/28 MI系列家用采暖水地暖(130-155㎡适用于四室两厅)",
+				"referral":"原装进口品质 新型冷凝技术 可节能40％ 外形小巧 便于安装",
+				"img":["images/sp-banner-04.jpg","images/sp-banner-06.jpg"],
+				"unit":"￥",
+				"price":28130.00,
+				"spIndex":0
+			},
+			{
+				"id":105,
+				"title":"德地氏MSL 24 MI FF 系列110-130㎡家庭采暖（水地暖）适... ",
+				"title2":"德地氏MSL 24 MI FF 系列110-130㎡家庭采暖（水地暖）适用于三室两厅",
+				"referral":"整机进口 法国品质 热效率高达92％ 大流量生活热水",
+				"img":["images/sp-banner-05.jpg"],
+				"unit":"￥",
+				"price":20980.00,
+				"spIndex":0
+			}
+		
+		]
+	},
+	{
+		"shoppingBnner":[
+			{
+				"id":114,
+				"title":"松下新风系统-PM2.5系列全热交换机套餐（80-100㎡两房两厅）",
+				"title2":"松下新风系统-PM2.5系列全热交换机套餐（80-100㎡两房两厅）",
+				"referral":"使用稳定可靠 操作简单方便 马达保修五年 PM2.5去除率超过95%",
+				"img":["images/shooping-images/banner1.jpg"],
+				"unit":"￥",
+				"price":10680
+			},
+			{
+				"id":115,
+				"title":"松下新风系统FV-06ZWP1C 家用壁挂式全热交换器（使用面... ",
+				"title2":"松下新风系统FV-06ZWP1C 家用壁挂式全热交换器（使用面积30㎡左右房屋）",
+				"referral":"装修后安装 PM2.5净化率超过95% 智能感温除湿",
+				"img":["images/shooping-images/banner2.jpg"],
+				"unit":"￥",
+				"price":7109
+	
+			}
+		],
+		"shoppinglist":[
+			
+			{
+				"id":109,
+				"title":"松下新风DC智能ERV全热交换器（适合130-180㎡三房两厅）",
+				"title2":"松下新风DC智能ERV全热交换器（适合130-180㎡三房两厅）",
+				"referral":"快速清除室内异味 PM2.5净化率达95%以上 马达保修五年！",
+				"img":["images/shooping-images/list3.jpg"],
+				"unit":"￥",
+				"price":21230,
+				"spIndex":1
+			},
+			{
+				"id":110,
+				"title":"松下新风系统FV-02NJP1C 家用PM2.5进气风机（使用面积50... ",
+				"title2":"松下新风系统FV-02NJP1C 家用PM2.5进气风机（使用面积50-80㎡左右房屋）",
+				"referral":"亚高效过滤网 24小时不间断换气 营造健康室内环境",
+				"img":["images/shooping-images/list5.jpg","images/shooping-images/list2.jpg"],
+				"unit":"￥",
+				"price":3989,
+				"spIndex":1
+			},
+			{
+				"id":111,
+				"title":"松下新风系统FY-E25PMA(L) 家用全热交换器（使用面积50-8... ",
+				"title2":"松下新风系统FY-E25PMA(L) 家用全热交换器（使用面积50-80㎡）",
+				"referral":"PM2.5去除率超过95% 操作简单方便 马达保修五年",
+				"img":["images/shooping-images/list4.jpg"],
+				"unit":"￥",
+				"price":7829,
+				"spIndex":1
+			},
+			{
+				"id":112,
+				"title":"三菱重工空气净化器Diamond系列SPD-511AC",
+				"title2":"三菱重工空气净化器Diamond系列SPD-511AC",
+				"referral":"三菱重工空气净化器Diamond系列SPD-511AC",
+				"img":["images/shooping-images/list7.jpg","images/shooping-images/list1.jpg"],
+				"unit":"￥",
+				"price":3280,
+				"spIndex":1
+			},
+			{
+				"id":113,
+				"title":"松下新风系统FV-06ZWP1C 家用壁挂式全热交换器（使用面... ",
+				"title2":"松下新风系统FV-06ZWP1C 家用壁挂式全热交换器（使用面积30㎡左右房屋）",
+				"referral":"装修后安装 PM2.5净化率超过95% 智能感温除湿",
+				"img":["images/shooping-images/list6.jpg"],
+				"unit":"￥",
+				"price":7109,
+				"spIndex":1
+			}
+		]
+	},
+	{
+		"shoppingBnner":[
+			{
+				"id":121,
+				"title":"德国恩美特全屋水处理系统 中央净水(公寓型)",
+				"title2":"德国恩美特全屋水处理系统 中央净水(公寓型)",
+				"referral":"德国专业水处理品牌 高效过滤杂质 保留矿物质 出水甘甜可直饮",
+				"img":["images/shooping-images/banner2-01.jpg"],
+				"unit":"￥",
+				"price":4780
+			},
+			{
+				"id":122,
+				"title":"德国恩美特中央软水机 家用沐浴洗衣服全屋过滤净水器NS-3-39",
+				"title2":"德国恩美特中央软水机 家用沐浴洗衣服全屋过滤净水器NS-3-39",
+				"referral":"德国技术 美白润肤 适合一厨一卫/一厨两卫家庭",
+				"img":["images/shooping-images/banner2-02.jpg"],
+				"unit":"￥",
+				"price":9280
+			}
+		],
+		"shoppinglist":[
+			
+			{
+				"id":116,
+				"title":"德国恩美特全屋水处理系统 中央净水(公寓型)",
+				"title2":"德国恩美特全屋水处理系统 中央净水(公寓型)",
+				"referral":"89微米极致过滤 高效过滤杂质 出水甘甜可直饮",
+				"img":["images/shooping-images/list2-04.jpg"],
+				"unit":"￥",
+				"price":2700,
+				"spIndex":2
+			},
+			{
+				"id":117,
+				"title":"德国恩美特全屋水处理系统 中央净水(别墅)",
+				"title2":"德国恩美特全屋水处理系统 中央净水(别墅)",
+				"referral":"德国专业水处理品牌 高效过滤杂质 保留矿物质 出水甘甜可直饮",
+				"img":["images/shooping-images/list2-03.jpg","images/shooping-images/list2-01.jpg"],
+				"unit":"￥",
+				"price":19690,
+				"spIndex":2
+			},
+			{
+				"id":118,
+				"title":"德国恩美特全屋水处理系统 中央净水(公寓型)",
+				"title2":"德国恩美特全屋水处理系统 中央净水(公寓型)",
+				"referral":"德国专业水处理品牌 高效过滤杂质 保留矿物质 出水甘甜可直饮",
+				"img":["images/shooping-images/list2-05.jpg"],
+				"unit":"￥",
+				"price":4780,
+				"spIndex":2
+			},
+			{
+				"id":119,
+				"title":"德国恩美特中央净水器 家用全屋大流量净水机OSS-1-100",
+				"title2":"德国恩美特中央净水器 家用全屋大流量净水机OSS-1-100",
+				"referral":"智能自动反冲洗 适合一厨一卫/一厨两卫家庭",
+				"img":["images/shooping-images/list2-06.jpg","images/shooping-images/list2-02.jpg"],
+				"unit":"￥",
+				"price":7380,
+				"spIndex":2
+			},
+			{
+				"id":120,
+				"title":"德国恩美特中央软水机 家用沐浴洗衣服全屋过滤净水器NS-3... ",
+				"title2":"德国恩美特中央软水机 家用沐浴洗衣服全屋过滤净水器NS-3-39",
+				"referral":"德国技术 美白润肤 适合一厨一卫/一厨两卫家庭",
+				"img":["images/shooping-images/list2-07.jpg"],
+				"unit":"￥",
+				"price":9280,
+				"spIndex":2
+			}
+		]
+	}
+]
