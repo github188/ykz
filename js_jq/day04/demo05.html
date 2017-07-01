@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			//1, 计算1+2+3+…+100的和
+			function fn(n){
+				if(n==1){
+					return n=1;
+				}
+				return fn(n-1)+n;
+			}
+			console.log(fn(100));
+			//输入一个n,打印n个hello world
+			function fn1(n){
+				if(n == 0){
+					return ;
+				}else if(n < 0){
+					return console.log("error");
+				}
+				console.log("hello world");
+				fn1(n-1);
+			}
+			fn1(0);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0 ;padding: 0;}
+			#box1{height: 300px;width: 300px;border: 1px solid #48E1DF;border-radius: 50%;position: absolute;top: 150px;left: 100px;}
+			#box2{height: 10px;width: 10px;background: #000000;border-radius: 50%; position: absolute;top: 300px;left: 200px;}
+		</style>
+		<script type="text/javascript" src="move.js"></script>
+		<script>
+			onload = function(){
+				var oBox1 = document.getElementById("box1");
+				var oBox2 = document.getElementById("box2");
+				
+				var r = 150;
+				var d = 0.5;
+				
+				
+				
+				var timer = setInterval(function(){
+					
+					oBox2.style.top = Math.sin(d)*r+295+"px"
+					oBox2.style.left = Math.cos(d)*r+245+"px"
+					
+					d += 0.05;
+				},50)
+				
+ 			}
+			
+		</script>
+	</head>
+	<body>
+		<div id="box1"></div>
+		<div id="box2"></div>
+	</body>
+</html>

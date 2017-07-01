@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			ul{list-style: none;}
+			ul li{font-size: 12px;background: #48E1DF;margin-bottom: 2px;color: #fff;width:100px;}
+		</style>
+		<script type="text/javascript" src="move.js"></script>
+		<script>
+			
+			onload = function(){
+				
+				var aUl = document.getElementsByTagName("ul")[0];
+				var aLi = document.getElementsByTagName("li");
+				
+				for(var i=0; i<aLi.length; i++){
+					aLi[i].onmousemove = function(){
+						animate(this,{paddingLeft:25, paddingRight:50})
+					}
+					aLi[i].onmouseout = function(){
+						animate(this,{paddingLeft:0,paddingRight:0})
+					}
+				}
+				
+			}
+			
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>首页</li>
+			<li>千锋精品课程</li>
+			<li>JS相关知识</li>
+			<li>关于我们</li>
+			<li>联系我们</li>
+		</ul>
+	</body>
+</html>

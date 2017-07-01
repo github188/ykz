@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="ajax.js"></script>
+		<script>
+			onload = function(){
+				
+				var p = new Promise(function(resolve, reject){
+					var xhr = createXHR();
+					xhr.open("POST","http://60.205.181.47/myPHPCode3/register.php",true);
+					xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+					xhr.send("username=zhangsan22d&password=123456&age=33");
+					xhr.onreadystatechange = function(){
+						if(xhr.readyState == 4 && xhr.status == 200){
+							console.log("注册");
+							resolve();
+						}
+					}	
+				})
+				p.then(function(){
+					var xhr1 = createXHR();
+					xhr1.open("POST","http://60.205.181.47/myPHPCode3/login.php",true);
+					xhr1.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+					xhr1.send("username=zhangsan22d&password=123456");
+					xhr1.onreadystatechange = function(){
+						if(xhr1.readyState == 4 && xhr1.status == 200){
+							console.log("登入");
+						}
+					}
+				})
+				
+				
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

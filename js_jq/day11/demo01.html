@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+		<style type="text/css">
+			div{height: 640px;width: 426px;background: url(images/images2/iphone.jpg) no-repeat;position: relative;}
+			#box{width:93px; height:62px;position: absolute;bottom: 33px;left: 34px;background: url(code/images/images2/unlock_btn.jpg) no-repeat;cursor: pointer;}
+		</style>
+		<script>
+			onload = function(){
+				var oDiv = document.getElementsByTagName("div")[0];
+				var oBox = document.getElementById("box");
+				if(window.getComputedStyle){
+				  var style = window.getComputedStyle(oBox,null);
+				}else{
+					var style = oBox.currentStyle;
+					
+				}
+				oBox.onmousedown = function(e){
+					e = e || event;
+					var aX = e.offsetX;
+				document.onmousemove = function(e){
+						e = e||event;
+						oBox.style.left = e.pageX - aX + "px";
+						if(parseInt(oBox.style.left ) >= 299 ){
+							oBox.style.left = 299 + "px";
+						}else if(parseInt(oBox.style.left )<=34){
+							oBox.style.left = 34 + "px";
+						}
+					}
+				document.onmouseup = function(){
+						oBox.style.left = 34 + "px";
+						document.onmousemove = null;
+						document.onmouseup = null;
+					}
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div>
+			<div id="box"></div>
+		</div>
+	</body>
+</html>

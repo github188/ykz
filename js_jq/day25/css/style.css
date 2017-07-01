@@ -1,0 +1,23 @@
+
+#banner{width: 400px;height: 550px;background:url(../images/bg.jpg) no-repeat;margin: 30px auto;position: relative;}
+#banner .stater{width: 100px;height: 20px;border-radius: 10px;border: 1px solid #7B7B7B;text-align: center;line-height: 20px;position: absolute;bottom: 10px;left: 50%;margin-left: -50px;cursor: pointer;}
+#banner .pause{height:20px;width:40px;border-radius:10px;border:1px solid #7B7B7B;text-align:center;line-height:20px;position:absolute;bottom:10px;left:20px;cursor:pointer;}
+#banner .go{height:20px;width:40px;border-radius:10px;border:1px solid #7B7B7B;text-align:center;line-height:20px;position:absolute;bottom:10px;left:20px;cursor:pointer;display: none;}
+#banner .grade{border: 1px solid #797778;height: 40px;width: 100px;border-radius: 20px;text-align: center;position:absolute;right: 20px;bottom: 10px;}
+
+#banner .plane{width: 49px;height: 61px;background: url(../images/me.png) no-repeat;position:absolute;background-size: 100% 100%;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

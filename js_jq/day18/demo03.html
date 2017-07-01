@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			onload = function(){
+				
+				function Drg(id){
+					var a = this;
+					this.oBox = document.getElementById(id);
+					this.oBox.onmousedown = function(e){
+						e = e || event;
+						a.start(e.pageX,e.pageY);
+					}
+					this.start = function(x,y){
+						this.X = x - this.oBox.offsetLeft;
+						this.Y = y - this.oBox.offsetTop;
+						
+						document.onmousemove = function(e){
+							e = e || event;
+							a.moving(e.pageX,e.pageY);
+						}
+					}
+					this.moving = function(x,y){
+						this.oBox.style.left = x - this.X + "px";
+						this.oBox.style.top = y - this.Y + "px";
+						
+						document.onmouseup = function(){
+							a.out();
+						}
+					}
+					this.out = function(){
+						document.onmousemove = null;
+						document.onmouseup = null;
+					}
+				}
+				
+				var drg = new Drg("box1");
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box1" style="width: 100px; height: 100px;background: #FF6700; position: absolute;left: 0;top: 0;"></div>
+	</body>
+</html>

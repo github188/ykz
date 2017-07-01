@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			//写个函数计算所有传入参数相乘的结果(参数数量不定)
+			function b(){
+				var sum = 1;
+				for(var i=0; i<arguments.length; i++){
+					sum *= arguments[i];		
+				}
+				return sum;
+			 
+			}
+			console.log(b(4,5,6));
+			
+			
+			/*//写个函数实现加减乘除运算(两个操作数, 一个操作符)
+			function c(a1,a2){
+				var sum1 = a1+a2;
+				var sum2 = a1*a2;
+				var sum3 = a1-a2;
+				var sum4 = a1/a2;
+				return ("加："+sum1+"减："+sum3+"乘："+sum2+"除"+sum4)
+			}
+			var d = c(4,5)
+			console.log(d);
+			//写一个函数计算1到n的和, 并返回结果打印出来;(n为函数参数)
+			function fn1(n){
+				var sum = 0;
+				for(var i=1; i<=n; i++){
+					sum += i;
+				}
+				return sum;
+			}
+			console.log(fn1(5));
+			//写一个函数计算n的阶乘,并返回结果打印出来
+			function fn2(n){
+				var sum = 1;
+				for(var i=1; i<=n; i++){
+					sum *= i;
+				}
+				return sum;
+			}
+			console.log(fn2(4));
+			//写一个函数计算两个数的最小公倍数; 并返回结果打印出来
+				
+				function fn3(n1,n2){
+					var n1;
+					var n2;
+					var max = n1>n2 ? n1 : n2;
+					for(var i=max; i<=n1*n2; i++){
+						if((i%n1 == 0)&&(i%n2 == 0)){
+						return i;
+					}
+				}
+				}
+			console.log(fn3(10,5));
+			//写个函数实现加减乘除运算(两个操作数, 一个操作符
+			function c(a){
+				var sum = a;
+				return sum;
+			}
+			var b = c(5+9);
+			console.log(b);*/
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

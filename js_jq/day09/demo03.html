@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box1 img{width: 100px;height: 100px;float: left;padding-right: 10px;}
+			#box2 img{width: 100px; height: 100px; margin-top: 10px;}
+		</style>
+		<script>
+			//1, 点击表格中的三张图片, 切换下面的图
+			onload = function(){
+				var oBox1 = document.getElementById("box1");
+				var oBox2 = document.getElementById("box2");
+				oBox1.childNodes[1].onclick = function(){
+					oBox2.childNodes[1].src = this.src;
+				}
+				oBox1.childNodes[3].onclick = function(){
+					oBox2.childNodes[1].src = this.src;
+				}
+				oBox1.childNodes[5].onclick = function(){
+					oBox2.childNodes[1].src = this.src;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box1" style="overflow: hidden;">
+			<img src="images/1.jpg" name="img" />
+			<img src="images/2.jpg" name="img" />
+			<img src="images/3.jpg" name="img" />
+		</div>
+		<div id="box2">
+			<img src="images/1.jpg" name="img" />
+		</div>
+	</body>
+</html>

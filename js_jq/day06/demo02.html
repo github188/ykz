@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*1, 注册页面的简单数据校验
+			Ø 先去掉两个输入框中的空格
+			Ø 用户名长度不低于6，不高于20
+			Ø 用户名不可以用数字开头
+			Ø 密码不能为空
+			Ø 输入框中要有默认提示 (placeholder )
+			Ø 点击登录按钮检查是否合法*/
+			
+			function fn(){
+				var a = document.getElementById("txt").value;
+				a = a.replace(/ /gi,"");
+				var b = document.getElementById("mima").value;
+				b = b.replace(/ /gi,"");
+				
+				if(a.length < 6 || a == "" || (a[0]-0) < 9 ){
+					 
+					return document.getElementById("p").innerHTML="请核对密码和账号是否有六个字。<br />用户名不可以用数字开头";
+				}else{
+					alert("提交成功");
+					return document.getElementById("p").innerHTML="",document.getElementById("p1").innerHTML="a";
+				}
+				if(b.length < 6 || b == ""){
+					return document.getElementById("p").innerHTML="请核对密码和账号是否有六个字";
+				}else{
+					alert("提交成功");
+					return document.getElementById("p").innerHTML="";
+					
+				}
+				return a,b;
+				
+			} 
+			
+			//2, 字母数字组合验证码（四位） (如: 4YT8) (数字,大写字母随机)
+			
+				var str = ""; 
+				for(var i=1; i<5; i++){
+					var a = parseInt(Math.random()*100)
+					if(a>=65 && a<=90){
+						str +=String.fromCharCode(a);    
+					}else{
+						str +=parseInt(Math.random()*10); 
+					}
+				} 
+				 
+			console.log(str); 
+			
+			//3, 将字符串按照单词进行逆序，空格作为划分单词的唯一条件
+			//如传入:”Welome to Beijing”改为 “Beijing to Welcome”
+			
+			var str = "Welome to Beijing";
+			var a = str.split(" ");
+			var str1 = "";
+			for(var i=a.length-1; i>=0; i--){
+				str1+=a[i]+" "
+			}
+			console.log(str1);
+			
+			//4, 对称数组. 传入一个数组，元素类型与个数皆未知，返回新数组，由原数组
+			//的元素正序反序拼接而成;
+			//如传入[“One”,“Two”,”Three”] 返回[“One”,“Two”,“Three”,”Three”,”Two”,“One”]
+			
+				var arr1 = ["One","Two","Three"];
+				var arr2 = [];
+				for(var i=arr1.length-1; i>=0; i--){
+					arr2.push(arr1[i]);
+				}
+				var arr3 = arr1.concat(arr2);
+				console.log(arr3);
+				
+			//5, 实现函数，查找子串出现的次数，返回字符串str中出现子串的次数
+			//如传入:”abcabcabc”,“abc”; 返回:3
+			
+				function fn(c,b){
+					var str = c;
+					var str1 = b;
+					var a = 0;
+					
+					for(var i=0; i<str.length; i++){
+						if(str.indexOf(b) != -1){
+							a++;
+						 str = str.replace(str1,"")
+						}
+					}
+				
+					return a;
+					
+				}
+			console.log(fn("abcabcabc","abc"));
+			
+			
+			//6, 已知千锋邮箱的用户名只能由数字字母下划线组成，域名为@1000phone.com
+			//,判断一个字符串是否是千锋邮箱，是返回true，不是返回false。
+			//mail@1000phone.com 是
+			//$mail@1000phone.com 不是
+			//mail@1000phone.comp 不是
+			function fn1(b){
+			var str = "@1000phone.com";
+			var str1 = b
+			var str3 = str1.substring(str1.length-14,str1.length)
+			if(str3 == str){
+				return true;
+			}else{
+				return false;
+			}
+			if((str3[0]<='Z'&&str3[0]>='A') || str3[0]<='z'&&str3[0]>='a' || str3[0]<=9&&str3>=0 || str3[0] == "_"){
+				
+			}else{
+				return false;
+			}
+			}
+			console.log(fn1("$mail@1000phone.com"))
+		</script>
+	</head>
+	<body>
+		<input type="text" id="txt"  placeholder="w" maxlength="20" />
+		<input type="password" id="mima" placeholder="*" maxlength="20" />
+		<input type="submit" id="su" value="提交" onclick="fn()" />
+		<p id="p"></p>
+		<p id="p1"></p>
+	</body>
+</html>

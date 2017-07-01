@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			onload = function(){
+				function DragBox(){
+					
+					}
+				DragBox.prototype.box = document.getElementById("box1");
+				DragBox.prototype.box.onmousedown = function(e){
+						e = e || event;
+						//console.log(this.id);
+						DragBox.prototype.startMove(e.pageX, e.pageY); //开始移动
+					}
+							//方法
+				DragBox.prototype.startMove = function(x, y){
+					this.disX = x - this.box.offsetLeft;
+					this.disY = y - this.box.offsetTop;
+					
+					document.onmousemove = function(e){
+						e = e || event;
+						DragBox.prototype.moving(e.pageX, e.pageY); //移动过程
+					}
+					document.onmouseup = function(){
+						DragBox.prototype.stopMove(); //停止移动
+					}
+				}
+							
+				DragBox.prototype.moving = function(x, y){
+					this.box.style.left = x - this.disX + "px";
+					this.box.style.top = y - this.disY + "px";
+				}
+				
+				DragBox.prototype.stopMove = function(){
+					document.onmousemove = document.onmouseup = null;
+				}
+						
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box1" style="width: 100px;height: 100px;background:red;position: absolute;left: 0;top: 0;"></div>
+	</body>
+</html>

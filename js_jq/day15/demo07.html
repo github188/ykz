@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			body{height: 5000px;}
+		</style>
+		<script>
+			onload = function(){
+				
+				var aDiv = document.getElementsByTagName("div")[0];
+				var a =	document.documentElement.clientHeight;
+				var c = aDiv.style.height;
+				aDiv.style.top = (a-parseInt(c))/2+"px"
+				onscroll = function(){
+					var timer = setInterval(function(){
+						var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+					
+						var a =	document.documentElement.clientHeight;
+						var c = aDiv.style.height;
+						
+						aDiv.style.top = (a-parseInt(c))/2+scrollTop+"px";
+						
+					},30)
+					
+				}
+				
+				
+				
+				
+				
+			
+			}
+		</script>
+	</head>
+	<body>
+		<div style="height: 100px; width: 100px;background: #48E1DF;position: absolute;right: 0;top: 0; "></div>
+	</body>
+</html>

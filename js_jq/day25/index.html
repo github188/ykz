@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>飞机大战</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+	<script>
+		onload = function(){
+			var oBox = document.getElementById("banner");
+			var oStater = oBox.getElementsByClassName("stater")[0];
+			oStater.onclick = function(){
+				var plane = new Dragplane();
+				plane.init();
+				oStater.style.display = "none";
+			}
+		}
+	</script>
+	<script type="text/javascript" src="js/usfly.js"></script>
+	<body>
+		<div id="banner">
+			<div class="stater">
+				开始游戏
+			</div>
+			<div class="pause">
+				暂停
+			</div>
+			<div class="go">
+				继续
+			</div>
+			<div class="grade">
+				<span>分 数</span><br  />
+				<span class="number"></span>
+			</div>
+		</div>
+	</body>
+</html>

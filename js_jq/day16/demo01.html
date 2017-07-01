@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			#box1{height: 200px;width: 300px;margin: 0 auto;margin-top:200px;overflow: hidden;position: relative;}
+			#lunb1{height: 200px;width: 1500px;list-style: none;display:block; position: absolute;left: 0;top: 0;}
+			#lunb1 li{width: 300px;height: 200px;line-height:200px;text-align: center;float: left;}
+			#lunb2 {list-style: none; height: 14px;position: absolute;right: 10px;bottom: 5px;}
+			#lunb2 li{width: 14px;height: 14px;line-height:14px;background: #DDDDDD;float: left;font-size: 12px;margin-right: 5px;text-align: center;cursor:pointer;}
+			#lunb2 .active{background: #48E1DF;}
+			
+			#box1 p{width: 36px;height: 14px;line-height: 14px;font-size: 12px;position: absolute;background: #FFA500;top: 50%;margin-top: -7px;cursor: pointer;}
+			#box1 p:nth-of-type(2){right: 0;}
+			
+		</style>
+		<script type="text/javascript" src="move.js"></script>
+		<script>
+			onload = function(){
+				var oBox = document.getElementById("box1");
+				var oUl = document.getElementById("lunb1");
+				var aLi = oUl.getElementsByTagName("li");
+				var oUl2 = document.getElementById("lunb2");
+				var aLi2 = oUl2.getElementsByTagName("li");
+ 				var aP = oBox.getElementsByTagName("p");
+ 				
+ 				
+				oUl.appendChild(aLi[0].cloneNode(true));
+				oUl.style.width = aLi[0].offsetWidth*aLi.length + "px";
+				
+				var i = 0;
+				var size = aLi.length
+				var timer;
+				timer = setInterval(function(){
+					i++;
+					move();
+				},1000)
+				
+				function move(){
+						if(i<0){
+							
+							oUl.style.left = -aLi[0].offsetWidth*(size-1)+"px";
+							i=size-2;
+						}
+						
+						if(i>=6){
+							
+							oUl.style.left = 0;
+							i=1;
+						}
+					
+						animate(oUl,{left:-aLi[0].offsetWidth*i});
+						
+						for(var j=0; j<aLi2.length; j++){
+							aLi2[j].className = "";
+						}
+						if(i == aLi.length-1){
+							aLi2[0].className = "active";
+						}else{
+							aLi2[i].className = "active";
+						}
+					
+				}
+				
+				
+				aP[0].onclick = function(){
+					i--;
+					move();
+				}
+				aP[1].onclick = function(){
+					i++;
+					move();
+				}
+				oBox.onmouseenter = function(){
+					clearInterval(timer);
+				}
+				oBox.onmouseout = function(){
+					clearInterval(timer);
+					timer = setInterval(function(){
+					i++;
+					move();
+					},1000)
+				}
+				for(var j=0; j<aLi2.length; j++){
+					aLi2[j].index = j;
+					aLi2[j].onclick = function(){
+						i = this.index;
+						move()
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box1">
+			<ul id="lunb1">
+				<li style="background: red;">1</li>
+				<li style="background: blue;">2</li>
+				<li style="background: brown;">3</li>
+				<li style="background: cyan;">4</li>
+				<li style="background: yellow;">5</li>
+			</ul>
+			<ul id="lunb2">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ul>
+			<p>上一页</p>
+			<p>下一页</p>
+		</div>
+	</body>
+</html>

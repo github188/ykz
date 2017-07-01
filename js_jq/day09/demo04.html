@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box1{width:200px; height: 300px; background: #827C7C;}
+			#box1 ul{list-style: none;display: flex; justify-content: space-around;flex-wrap: wrap;padding: 0;}
+			#box1 ul li{width:60px ;height: 50px; background:#48E1DF ;margin-top: 5px;display: flex;justify-content: center;align-items: center;flex-direction: column;color: #fff;}
+			#box1 p {width: 150px;height: 50px;background: #fff;margin: 0 auto;}
+		</style>
+		<script>
+			onload = function(){
+				var oUl = document.getElementsByTagName("ul");
+				var oLi = document.getElementsByTagName("li");
+				var aP = document.getElementsByTagName("p")[0];
+				for(var i=0; i<oLi.length; i++){ 
+					oLi[i].index = i;
+					oLi[i].onclick = function(){
+						for(var j=0; j<oLi.length; j++){
+							if(this.index == j){
+								this.style.background = "#fff";
+								this.style.color = "red" ;
+								this.style.border = "1px solid red";
+								this.style.boxSizing = "border-box";
+							}else{
+								oLi[j].style.background = "#48E1DF";
+								oLi[j].style.color = "#fff" ;
+								oLi[j].style.border = "0";
+							}
+							aP.innerHTML = this.index+1+"月份好";
+						}	
+					}
+				
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box1">
+			<ul>
+				<li>
+					<strong>1</strong>
+					<span>Jan</span>
+				</li>
+				<li>
+					<strong>2</strong>
+					<span>Jan</span>
+				</li>
+				<li>
+					<strong>3</strong>
+					<span>Jan</span>
+				</li>
+				<li>
+					<strong>4</strong>
+					<span>Jan</span>
+				</li>
+				<li>
+					<strong>5</strong>
+					<span>Jan</span>
+				</li>
+				<li>
+					<strong>6</strong>
+					<span>Jan</span>
+				</li>
+				<li>
+					<strong>7</strong>
+					<span>Jan</span>
+				</li>
+				<li>
+					<strong>8</strong>
+					<span>Jan</span>
+				</li>
+				<li>
+					<strong>9</strong>
+					<span>Jan</span>
+				</li>
+				<li>
+					<strong>10</strong>
+					<span>Jan</span>
+				</li>
+				<li>
+					<strong>11</strong>
+					<span>Jan</span>
+				</li>
+				<li>
+					<strong>12</strong>
+					<span>Jan</span>
+				</li>
+			</ul>
+			<p></p>
+		</div>
+	</body>
+</html>

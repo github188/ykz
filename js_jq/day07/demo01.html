@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			//1, 显示当前时间 (显示格式: 2016年 11月 11日 11时 11分 11秒)
+			
+			var date = new Date("2016/11/11 11:11:11")
+			var h = date.getHours();
+			var m = date.getMinutes();
+			var s = date.getSeconds();
+			date = date.toLocaleDateString();
+			var a = date+h+"时"+m+"分"+s+"秒";
+			
+			console.log(a)
+			
+			//2, 判断两个日期相差的天数(可先求毫秒数差,再转换成天)
+			
+				var date1 = new Date(2016,10,11);
+				var date2 = new Date(2016,10,13);
+				var a =(date2.valueOf()-date1.valueOf())/1000/3600/24;
+				console.log(a+"天");
+			
+			//3, 根据getDate()和setDate()， 封装一个函数afterDate(date,n)，得到日期date的n天后的日期
+			
+				function afterDate(date,n){
+					var a = new Date(date);
+					var b = a.valueOf()+n*1000*3600*24;
+					var c = new Date(b);
+					return c.toLocaleDateString();
+					
+				}
+			console.log(afterDate("2016,10,11",30))
+			
+			
+			
+				function afterDate(date,n){
+					var a = new Date(date);
+					a.setDate(a.getDate()+n);
+					return a.toLocaleDateString();
+				}
+			console.log(afterDate("2016,11,11",30))
+			
+			//1, 创建一个人的对象, 添加属性: 姓名 年龄 爱好 薪资期望, 并有一个打印自身信息的方法,
+			//可以输出自身信息;
+			
+				var personal = {
+					name:"张三", age:"18", hobby:"打乒乓球", pay:"10k"
+				}
+				personal.run = function (){
+					console.log(personal.name+","+personal.age+","+personal.hobby+","+personal.pay+",") ;
+				}
+				personal.run();
+			
+			 
+			
+			//2, 创建一个锤子对象hammer, 有属性:宽,高,重; 方法:可以锤钉子
+			
+				var hammer = {
+					width:10,height:50,weight:60,
+				}
+				hammer.run = function(){
+					console.log("可以锤钉子")
+				}
+				hammer.run();
+				
+			/*3, 有一辆50km/h车,跑在一条1000km路上，问多少小时跑完？
+				对象:
+				车Car 属性: 速度speed 50km/h
+				功能: 跑在路上runOnRoad(Road)
+				路Road */
+				
+				 var car = {
+				 	speed:50, 
+				 	runOnRoad:function(r){
+				 		console.log(r.length/car.speed);
+				 	}
+				 }
+				 var Road = {
+				 	length:1000
+				 }
+				car.runOnRoad(Road);
+				
+				
+				//1, 计算2017年11月11日 11时 11分 11秒 距离当前日期的时间差, 并以指定的格式
+				//(天/时/分/秒)的形式显示.
+				var date = new Date();
+				var date1 = new Date("2017/11/11 11:11:11")
+				var mun = date1.valueOf() - date.valueOf()
+				var day = parseInt(mun/(1000*3600*24));
+				var h = parseInt(mun/(1000*3600)) % 24;
+				var m =  parseInt(mun/(1000*60)) % 60;
+				var s = parseInt(mun/1000 % 60);
+				console.log(day+"天"+h+"时"+m+"分"+s+"秒");
+				
+				//2, 实现秒表功能, 包含时,分,秒,毫秒，点击按钮1开始计时，点击按钮2结束计时
+					onload = function(){
+						var aSpan = document.getElementsByTagName("span");
+						var oBtun = document.getElementsByTagName("input")[0];
+						var oBtun1 = document.getElementsByTagName("input")[1];
+						
+						var i = 0;//毫秒数
+						var timer;
+						
+						oBtun.onclick = function(){
+							clearInterval(timer);
+							timer = setInterval(function(){
+								i+=100;
+								var h = parseInt(i/(3600*1000));
+								var m = parseInt(i/(60*1000) % 60);
+								var s = parseInt(i/1000 % 60 );
+								var ms = i%1000;
+								aSpan[0].innerHTML = h<10 ? "0"+h : h;
+								aSpan[1].innerHTML = m<10 ? "0"+m : m;
+								aSpan[2].innerHTML = s<10 ? "0"+s : s;
+								aSpan[3].innerHTML = ms<10 ? "00"+ms : (ms<100 ? "0"+ms : ms);
+							},100)
+						}
+						oBtun1.onclick = function(){
+							clearInterval(timer);
+						}
+					}
+				
+					
+					
+					
+		</script>
+	</head>
+	<body>
+		<span>00</span>时
+		<span>00</span>分
+		<span>00</span>秒
+		<span>000</span>毫秒<br  />
+		<input type="button" value="点击开始计时" />
+		<input type="button" value="点击结束计时" />
+	</body> 
+</html>

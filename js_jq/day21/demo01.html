@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			table tr td{border: 1px solid #000000;}
+		</style>
+		<script type="text/javascript" src="ajax.js"></script>
+		<script>
+			onload = function(){
+				var aTab = document.getElementById("table");
+				var aTr = document.getElementsByTagName("tr");
+				var aInput = document.getElementsByTagName("input")[0];
+				var aDiv = document.getElementsByTagName("div")[0];
+				var x1 = aDiv.offsetLeft;
+				setInterval(function(){
+					var x = aDiv.offsetLeft - 2;
+					
+					if(x < 0){
+						x = x1;
+					}
+					aDiv.style.left = x + "px";
+				},30)
+				
+				aInput.onclick = function(){
+					//xhr 对象
+				var xhr = createXHR();
+				
+				//open()
+				xhr.open("get","http://60.205.181.47/myPHPCode2/person.php",true)
+				
+				//send()
+				xhr.send(null);
+				
+				//接收数据
+				xhr.onreadystatechange = function(){
+					if(xhr.readyState == 4 && xhr.status == 200 ){
+						var responseArr = JSON.parse(xhr.responseText);
+						for(var i=0; i<responseArr.length; i++){
+							obj = responseArr[i];
+							var tr = document.createElement("tr");
+							aTab.children[0].appendChild(tr);
+							
+							var td1 = document.createElement("td");
+							var td2 = document.createElement("td");
+							var td3 = document.createElement("td");
+							var td4 = document.createElement("td");
+							var td5 = document.createElement("td");
+							var td6 = document.createElement("td");
+							
+							td1.innerHTML = obj.name;
+							td2.innerHTML = obj.age;
+							td3.innerHTML = obj.sex;
+							td4.innerHTML = obj.phone;
+							td5.innerHTML = obj.address;
+							td6.innerHTML = obj.qq;
+							
+							tr.appendChild(td1);
+							tr.appendChild(td2);
+							tr.appendChild(td3);
+							tr.appendChild(td4);
+							tr.appendChild(td5);
+							tr.appendChild(td6);
+							
+						}
+					}
+				}
+				}
+				
+				
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="点击我加载数据" />
+		<table id="table" style="border: 1px solid #000000;bord">
+			<tr>
+				<td>name</td>
+				<td>age</td>
+				<td>sex</td>
+				<td>phone</td>
+				<td>address</td>
+				<td>qq</td>
+			</tr>
+		</table>
+		<div style="width: 80px;height: 30px;position: absolute;left: 300px;top: 500px;">滚动文字</div>
+	</body>
+</html>

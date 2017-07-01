@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			form{width: 200px; height: 100px; background: #48E1DF;}
+		</style>
+		<script src="cookie.js" type="text/javascript"></script>
+		<script>
+			onload = function(){
+				var oF1 = document.getElementById("f1");
+				var oZh = document.getElementById("zhanghao");
+				var oMima = document.getElementById("mima");
+				var aInput = document.getElementsByTagName("input");
+				var aSpan = document.getElementsByTagName("span");
+				oZh.value = getCookie("uname");
+				oMima.value = getCookie("unpaw");
+				aInput[3].onclick = function(){
+					if(aInput[2].checked){
+						var d = new Date();
+						d.setDate(d.getDate()+10);
+						setCookie("uname",oZh.value,d)
+						setCookie("unpaw",oMima.value,d)
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form id="f1">
+			<span>账号</span><input type="text" id="zhanghao"/><br />
+			<span>密码</span><input type="password" id="mima" /><br />
+			<input type="checkbox" />十天内免登陆<br />
+			<input type="button" value="确定" />
+			<input type="reset" value="重置" />
+		</form>
+	</body>
+</html>

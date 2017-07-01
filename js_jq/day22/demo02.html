@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="ajax.js"></script>
+		<script>
+			onload = function(){
+				var aInput = document.getElementsByTagName("input");
+				
+				aInput[2].onclick = function(){
+					var xhr = createXHR();
+					xhr.open("POST","http://60.205.181.47/myPHPCode3/login.php",true);
+					xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+					xhr.send("username="+aInput[0].value+"&password="+aInput[1].value);
+					xhr.onreadystatechange = function(){
+						if(xhr.readyState == 4 && xhr.status == 200){
+							console.log(xhr.responseText);
+							var obj = JSON.parse(xhr.responseText);
+							console.log(obj.msg);
+						}
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h3>登入</h3>
+		<form>
+			<input type="text" placeholder="请输入用户名" /><br />
+			<input type="password" placeholder="请输入密码" /><br />
+			<input type="button" value="登入" />
+		</form>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+		<script>
+			//1, 求数组中所有元素的和
+			//2, 让数组中的元素交换位置（重要）
+			
+			var arr = [2,5,6,8]
+ 			var i = 2;
+ 			var b = arr[i];
+			arr[i]=arr[i+1]; 
+			arr[i+1]=b;
+			
+		
+			console.log(arr)
+			//3, 求数组的最大数和最小数（重要）
+			var arr = [2,6,0,4,9]
+			var min = 2;
+			var max = 4;
+			var minSup = 0;
+			var maxSup = 0
+			for(var i=0; i<arr.length; i++){
+				if(min>arr[i]){
+				min=arr[i];
+				minSup = i;
+				}
+				if(max<arr[i]){
+					max=arr[i];
+					maxSup = i;	
+				}
+			}
+			console.log(min+"是最小数");
+			console.log(max+"是最大数");
+			console.log(minSup+"是最小数下标");
+			console.log(maxSup+"是最大数下标");
+			
+			//4, 求数组的最小数的下标（重要）
+			
+			//扁平化的数组
+			
+			
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

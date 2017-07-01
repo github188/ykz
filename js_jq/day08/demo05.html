@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			//1, 写一个定时器, 每隔0.1秒修改一次div内文字颜色和文字大小. 最开始这个文字是默认大小, 开启定时器
+			//后文字大小开始增大, 当增大了6次以后, 文字大小开始缩小, 缩小6次, 文字再开始增大…效果如下图:
+			onload = function(){
+				var oBox = document.getElementsByTagName("div");
+				var fontSize = ["18px","20px","22px","24px","28px","30px"];
+				var colors = ["red", "blue", "yellow", "green", "black", "orange"];
+				var i = 0;
+				if(i==0){
+					var j = 0;
+					setInterval(function fn(){
+					i++;
+					oBox[0].style.fontSize = fontSize[i];
+					oBox[0].style.color = colors[i];
+					if(i==colors.length-1){
+						
+						j=i;
+					}else if (j==colors.length-1){
+						setInterval(function(){
+							j--;
+							oBox[0].style.fontSize = fontSize[j];
+							oBox[0].style.color = colors[j];
+							if(j==0){
+								i=j;
+							}
+						},100)
+					}
+					},100)
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div style="width: 200px;height: 200px;background: #F7D7D7;">
+			看我72变
+		</div>
+	</body>
+</html>

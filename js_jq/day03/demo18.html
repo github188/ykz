@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*求整数1～100的累加值，但要求跳过所有个位为3的数
+			for(var i=1; i<=100; i++){
+				if(i%10 == 3){
+					continue;
+					
+				}
+				console.log(i);
+			}
+			//判断一个数是不是合数。
+			var a =39;
+			for(var i=2; i<a; i++){
+				if( a%i == 0){
+					console.log(a+"是合数")
+					break;
+				}
+			}*/
+			//判断一个数是不是素数。
+			var n = 19;
+			var b = true;
+			for(var i=2; i<n; i++){
+				if(n%i == 0){
+					b=false;
+					break;
+				}
+			}
+			if(b){
+					console.log(n+"是素数")
+				}
+			
+			var c = undefined;
+			console.log(c);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

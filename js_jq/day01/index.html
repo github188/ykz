@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script>
+			var weight = 90;
+			var height = 1.71;
+			var BMI = weight/(height*height)
+			console.log(BMI)
+			
+			if(BMI<18.5){
+				console.log("过轻")
+			}else if(BMI<24.99){
+				console.log("正常")
+			}else if(BMI<28){
+				console.log("过重")
+			}else if(BMI<32){
+				console.log("肥胖")
+			}else if(BMI>32){
+				console.log("非常肥胖")
+			}
+		</script>
+		<script>
+			var number = -1
+			if(number > 0){
+				console.log("大于0")
+			}else if(number == 0){
+				console.log("等于0")
+			}else if(number < 0){
+				console.log("小于0")
+			}
+		</script>
+		<script>
+			var number = 6
+			if((number % 2) == 0){
+				console.log(number+"为偶数")
+			}else{
+				console.log(number+"为奇数")
+			}
+		</script>
+		<script>
+			var height = 170;
+			var weight = 130;
+			var bz = (height-108)*2;
+			var a =bz-weight;
+			console.log(bz);
+			console.log(a);
+			
+			if(-10 < a && a < 10){
+				console.log("合格")
+			}else{
+				console.log("不合格")
+			};
+		</script>
+		<script>
+			var r = 1;
+			var π = Math.PI;
+			var s = 1/2*π*r*r;
+			console.log(s);
+		</script>
+		<script>
+			var year=2012;
+			if(year % 4 ==0 && year % 100 != 0){
+				console.log(year+"为闰年")
+			}else if(year % 400 == 0){
+				console.log(year+"为闰年")
+			}else{
+				console.log(year+"为平年")
+			}
+		</script>
+		<script>
+			var grade = 61 ;
+			if(grade == 100){
+				console.log("爸爸给他买辆车")
+			}else if(grade >= 90){
+				console.log("妈妈给他买MP4")
+			}else if(grade >= 60){
+				console.log("妈妈给他买本参考书")
+			}else{
+				console.log("什么都不买")
+			}
+		</script>
+		<script>
+			var jf = 1999 ;
+			if(jf < 2000){
+				console.log("九折")
+			}else if(jf >= 2000 && jf < 4000){
+				console.log("八折")
+			}else if(jf >= 4000 && jf < 8000){
+				console.log("七折")
+			}else{
+				console.log("六折")
+			}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

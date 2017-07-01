@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function Cat(fur){
+				this.fur = fur;
+				this.eat = function(){
+					console.log("吃各种东西")
+				}
+				this.miaow = function(){
+					console.log("喵喵")
+				}
+			}
+			function TomCat(friend,fur){
+				Cat.call(this,fur);
+				this.friend = friend;
+				this.catchMouse = function(){
+					console.log("抓老鼠")
+				};
+				this.eat = function(){
+					console.log("只吃面包")
+				}
+			}
+			TomCat.prototype = new Cat();
+			var tomcat = new TomCat("杰克","蓝色")
+			console.log(tomcat.fur);
+			console.log(tomcat.friend);
+			tomcat.eat();
+			tomcat.catchMouse();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

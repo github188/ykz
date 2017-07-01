@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{height: 5000px;}
+			p{width: 100%;height: 20px;background: #48E1DF;color: #fff;position:absolute;top:200px;}
+		</style>
+		<script>
+			//3, 顶部悬浮(吸顶效果),当滚动条滚动到较下方时, 留言信息一直显示在顶部
+			onload = function(){
+				onscroll = function(){
+					var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+					var ap = document.getElementsByTagName("p");
+					if(scrollTop > 200){
+						ap[0].style.position = "fixed";
+						ap[0].style.top = 0;
+					}else if(scrollTop <=200){
+						ap[0].style.position = "absolute";
+						ap[0].style.top = 200+"px"; 
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<p>留言信息</p>
+	</body>
+</html>

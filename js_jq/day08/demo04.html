@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			//1, 有一个装有颜色的数组 ["red", "blue", "yellow", "green", "black", "orange"];
+			//点击button 启动定时器,每一秒给它换一次色, 按顺序换色
+			onload = function(){
+				var oBox = document.getElementsByTagName("div");
+				var aInput = document.getElementsByTagName("input");
+				var color = ["red", "blue", "yellow", "green", "black", "orange"];
+				var times;
+				aInput[0].onclick = function(){
+					var i = 0;
+					clearInterval(times);
+					times = setInterval(function(){
+						i++;
+						oBox[0].style.background = color[i];
+						if(i == color.length-1){
+							i=-1;
+						}
+					},1000)
+				}
+				aInput[1].onclick = function(){
+					clearInterval(times);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div style="width: 100px;height: 100px;background: #FF0000;"></div>
+		<input type="button" value="改变颜色" />
+		<input type="button" value="暂停" />
+	</body>
+</html>

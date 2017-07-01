@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			onload = function(){
+				function Person(name,age){
+					this.name="张三";
+					this.age=33;
+				}
+				Person.prototype = {
+					constructor:Person,
+					run:function DragBox(id){
+					
+							//属性
+							var that = this;
+							this.box = document.getElementById(id);
+							this.box.onmousedown = function(e){
+								e = e || event;
+								//console.log(this.id);
+								that.startMove(e.pageX, e.pageY); //开始移动
+							}
+							
+							//方法
+							this.startMove = function(x, y){
+								this.disX = x - this.box.offsetLeft;
+								this.disY = y - this.box.offsetTop;
+								
+								document.onmousemove = function(e){
+									e = e || event;
+									that.moving(e.pageX, e.pageY); //移动过程
+								}
+								document.onmouseup = function(){
+									that.stopMove(); //停止移动
+								}
+							}
+							
+							this.moving = function(x, y){
+								this.box.style.left = x - this.disX + "px";
+								this.box.style.top = y - this.disY + "px";
+							}
+							
+							this.stopMove = function(){
+								document.onmousemove = document.onmouseup = null;
+							}
+							
+						}
+				}
+				Person.prototype.run("box1");
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box1" style="width: 100px;height: 100px;background:red;position: absolute;left: 0;top: 0;"></div>
+	</body>
+</html>

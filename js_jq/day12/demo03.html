@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="cookie.js"></script>
+		<script>
+			onload = function(){
+				var oBox = document.getElementsByTagName("div");
+				var aSpan = document.getElementsByTagName("span");
+				oBox[0].style.left = getCookie("x");
+				oBox[0].style.top = getCookie("y");
+				aSpan[0].innerHTML = getCookie("sx");
+				aSpan[1].innerHTML = getCookie("sy");
+				oBox[0].onmousedown = function(e){
+					e = e ||event;
+					if (e.preventDefault) {
+						e.preventDefault(); //阻止浏览器默认行为，非IE
+					}else {
+						e.returnValue = false; //IE
+					}
+					var x = e.offsetX;
+					var y = e.offsetY;
+					document.onmousemove = function(e){
+						e = e || event;
+						oBox[0].style.left = e.pageX - x +"px";
+						oBox[0].style.top = e.pageY - y +"px";
+						aSpan[0].innerHTML = "X:"+(e.pageX-x)+"，";
+						aSpan[1].innerHTML = "Y:"+(e.pageY-y);
+						var d = new Date();
+						d.setDate(d.getDate()+2)
+						setCookie("x",oBox[0].style.left,d);
+						setCookie("y",oBox[0].style.top,d)
+						setCookie("sx",aSpan[0].innerHTML,d)
+						setCookie("sy",aSpan[1].innerHTML,d)
+					}
+					document.onmouseup = function(){
+						document.onmousemove = null;
+						document.onmouseup = null;
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div style="height: 100px;width: 150px;background: #FF0000;position: absolute;left: 0;top: 0;">
+			<span></span>
+			<span></span>
+		</div>
+	</body>
+</html>

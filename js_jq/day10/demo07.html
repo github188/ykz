@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{width:526px ;height: 557px;padding: 10px;box-sizing: border-box;border:1px solid #000;padding-right: 5px; margin: 0 auto;margin-top: 50px;}
+			div img{width: 96.6px;height: 130px;float: left;margin-right:5px ;margin-bottom: 5px;}
+		</style>
+		<script>
+			onload = function(){
+				var aImg = document.getElementsByTagName("img");
+				for(var i=1; i<aImg.length; i++){
+					aImg[i].onmouseenter = function(){
+						aImg[0].src = this.src;
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div>
+			<img src="images/5.jpg" style="width: 300px;height: 400px;" />
+			<img src="images/5.jpg" />
+			<img src="images/6.jpg" />
+			<img src="images/7.jpg" />
+			<img src="images/8.jpg" />
+			<img src="images/9.jpg" />
+			<img src="images/10.jpg" />
+			<img src="images/11.jpg" />
+			<img src="images/12.jpg" />
+			<img src="images/13.jpg" />
+			<img src="images/14.jpg" />
+			<img src="images/15.jpg" />
+		</div>
+	</body>
+</html>

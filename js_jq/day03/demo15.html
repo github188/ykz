@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*输入两个数n，a，如果n==3， a == 2；
+			输出 2 + 22 + 222 的值。（不用输出式子）（****）
+			如: n == 4， a == 3；
+			输出 3 + 33 + 333 + 3333的值。
+			提示: 1、n = 3,相加三次,每次相加比前一次相加的数,多一位
+			2、每次多的这个位数的值为a, 3, 3*10+3(33), 33*10+3(333)*/
+			var n = 4;
+			var a = 3;
+			var sum = 0;
+			var b = 0
+			for(var i=1; i<=n; i++){
+				b=(10*b+a);
+				sum=sum+b;
+				console.log(sum);
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

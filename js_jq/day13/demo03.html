@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			form{display:block;margin: 0 auto;width: 300px;min-height: 230px;background: #48E1DF;padding-left: 10px;}
+			form h3{text-align: center;}
+			span{color: red;font-size: 12px;}
+		</style>
+		<script>
+//			3, 有以下表单, 验证用户名, 密码, 手机号
+//			Ø 用户名只包含数字,字母,下划线, 且长度不小于6位
+//			Ø 密码长度在8到16位
+//			Ø 手机号要合法
+			onload = function(){
+				var aInput = document.getElementsByTagName("input");
+				var aP = document.getElementsByTagName("span");
+				aInput[3].onclick = function(){
+					var a = /^\w{6}$/ ;
+					if(a.test(aInput[0].value) == false){
+						aP[0].innerHTML = "*用户名只包含数字字母，下划线， 且长度不小于6位";
+					}else{
+						aP[0].innerHTML = "";
+					}
+					var b = /^\w{8,16}$/;
+					if(b.test(aInput[1].value) == false){
+						aP[1].innerHTML = "*密码长度在8到16位"
+					}else{
+						aP[1].innerHTML = "";
+					}
+					var c = /^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[05-9]))\d{8}$/;
+					if(c.test(aInput[2].value) == false){
+						aP[2].innerHTML = "*手机号不合法";
+					}else{
+						aP[2].innerHTML = "";
+					}
+				}
+				aInput[4].onclick = function(){
+					aP[0].innerHTML = "";
+					aP[1].innerHTML = "";
+					aP[2].innerHTML = "";
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		
+		<form>
+			<h3>注册</h3>
+			用户名：<input type="text" /><br />
+			<span></span><br />
+			密&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password"  /><br />
+			<span></span><br />
+			手机号：<input type="text"  /><br />
+			<span></span><br />
+			<input type="button" value="提交" />
+			<input type="reset" />
+		</form>
+	</body>
+</html>

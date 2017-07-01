@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			var jsonStr = '[{"name": "a","age" : 1},{"name" : "b","age" : 2}]';
+			var jsonObj = JSON.parse(jsonStr);
+			console.log(typeof jsonStr);
+			console.log(typeof jsonObj);
+			
+			
+			var jsonObj = [{name : 'a', age : 1},{name : 'b', age : 2}];
+			var jsonStr = JSON.stringify(jsonObj);
+			console.log(typeof jsonObj);
+			console.log(typeof jsonStr);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

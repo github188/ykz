@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{width: 100px;height: 100px;background: red;position: absolute;left: 0;top: 0;}
+			div:nth-of-type(2){top:110px;}
+			div:nth-of-type(3){top:220px;}
+			div:nth-of-type(4){top:330px;}
+		</style>
+		<script type="text/javascript" src="move.js"></script>
+		<script>
+			onload = function(){
+				var aDiv = document.getElementsByTagName("div");
+				for(var i=0; i<aDiv.length; i++){
+					aDiv[i].onmouseenter = function(){
+						animate(this,"width",400)
+					}
+					aDiv[i].onmouseout= function(){
+						animate(this,"width",100)
+					}
+				}
+				
+				function animate(obj,attr,iTarget){
+						clearInterval(obj.timer);
+						obj.timer = setInterval(function(){
+							var a = parseFloat(getStyleAttr(obj, attr));
+							a = Math.round(a);
+						
+							var speen = (iTarget - a)/8;
+							speen = speen>0 ? Math.ceil(speen) : Math.floor(speen); 
+							
+							if(a == iTarget){
+								clearInterval(obj.timer);
+								return;
+							}
+							
+							obj.style[attr] = a + speen +"px";
+							
+						},10)
+						
+					}
+						
+					
+				}
+			
+		</script>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</body>
+</html>

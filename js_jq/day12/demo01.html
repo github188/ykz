@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			var d = new Date();
+			document.cookie = "username=zhaoliu";
+			document.cookie = "name=zhaoliu";
+			console.log(document.cookie); //username=zhaoliu
+			document.cookie = "username=;expires=" + d; 
+			document.cookie = "name=;expires=" + d;//删除username的cookie
+			console.log(document.cookie); //""		
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

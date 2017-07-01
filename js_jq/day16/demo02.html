@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link type="text/css" rel="stylesheet" href="css/reset.css" />
+		<style type="text/css">
+			*{margin: 0; padding: 0;}
+			ul{list-style: none;}
+			#box1{height:340px;width: 790px;margin: 150px auto;position: relative;}
+			#list{height:340px;width: 790px;position: relative;}
+			#list li{float: left;position:absolute;left: 0;top: 0;opacity: 0;filter: apha(opacity=0);}
+			#list li img{display: block;}
+			
+			#list2{height: 12px; position: absolute;bottom: 10px;left: 50%;margin-left: -87px;padding: 4px;z-index: 1;}
+			#list2 li{width: 12px; height: 12px; background: #fff;margin-right: 10px;float: left;border-radius: 50%;}
+			#list2 li:nth-last-of-type(1){margin-right: 0;}
+			#list2 .active{background: red;}
+			
+			#box1 span:nth-of-type(1){display: block;height: 20px;width: 174px;background: #fff;opacity: 0.3;filter: alpha(opacity=30);position:absolute;bottom: 10px;left: 50%;margin-left: -87px;border-radius: 10px;}
+			
+			#box1 .sp{display: block;width: 30px;height: 40px;background: #000000;color: #fff;position: absolute;right: 0;top: 50%;margin-top: -20px;opacity: 0.2;filter: alpha(opacity=20);display: none;}
+			#box1 .la{left: 0;}
+			#box1 .sp .iconfont{opacity: 1;filter: alpha(opacity=100);}
+			#box1 i{position: absolute;top: 50%;margin-top: -20px;color: #fff;display: none;width: 30px;height: 40px;line-height:40px;text-align: center;z-index: 1;cursor: pointer;}
+			#box1 i:nth-of-type(1){left: 0;}
+			#box1 i:nth-of-type(2){right: 0;}
+			#box1:hover i{display: block;}
+			#box1:hover .sp{display: block;}
+		</style>
+		<script type="text/javascript" src="move.js"></script>
+		<script>
+			onload = function(){
+				var oBox = document.getElementById("box1");
+				var oList = document.getElementById("list");
+				var oList2 = document.getElementById("list2");
+				var aLi = oList.getElementsByTagName("li");
+				var aLi2 = oList2.getElementsByTagName("li");
+				var aSpan = oBox.getElementsByClassName("sp");
+				var aI = oBox.getElementsByTagName("i");
+				
+				oBox.onmousedown = function(e){
+					e = e || event;
+					if (e.preventDefault) {
+						e.preventDefault(); //阻止浏览器默认行为，非IE
+					}else {
+						e.returnValue = false; //IE
+					}
+				}
+				for(var a=0; a<aI.length; a++){
+					aI[a].index = a;
+					aI[a].onmouseenter = function(){
+						aSpan[this.index].style.opacity = 0.5;
+						aSpan[this.index].style.filter = "apha(opacity=50)";
+					}
+					aI[a].onmouseleave = function(){
+						aSpan[this.index].style.opacity = 0.2;
+						aSpan[this.index].style.filter = "apha(opacity=20)";
+					}
+				}
+				
+				aLi[0].style.opacity = 1;
+				aLi[0].style.filter = "apha(opacity=100)";
+				aLi2[0].className = "active";
+				
+				var i = 0;
+				var timer = setInterval(function(){
+					i++;
+					move();
+				},1000)
+				function move(){
+					if(i<0){
+						i=aLi.length-1;
+					}
+					if(i>=8){
+						i=0;
+					}
+					for(var j=0; j<aLi.length; j++){
+						if(i==j){
+							animate(aLi[i],{opacity:100});
+							aLi2[i].className = "active"
+						}
+						else{
+							animate(aLi[j],{opacity:0});
+							aLi2[j].className = "";
+						}
+					}
+					
+				}
+				for(var e=0; e<aLi2.length; e++){
+					aLi2[e].index = e;
+					aLi2[e].onmouseenter = function(){
+							i = this.index; 
+							move();
+					}
+				}
+				oBox.onmouseenter = function(){
+					clearInterval(timer);
+				}
+				oBox.onmouseleave = function(){
+					timer = setInterval(function(){
+						i++;
+						move();
+					},1000)
+				}
+				aI[0].onclick = function(){
+					i--;
+					move();
+				}
+				aI[1].onclick = function(){
+					i++;
+					move();
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div id="box1">
+			<ul id="list">
+				<li>
+					<img src="images/banner_1.jpg" />
+				</li>
+				<li>
+					<img src="images/banner_2.jpg" />
+				</li>
+				<li>
+					<img src="images/banner_3.jpg" />
+				</li>
+				<li>
+					<img src="images/banner_4.jpg" />
+				</li>
+				<li>
+					<img src="images/banner_5.jpg" />
+				</li>
+				<li>
+					<img src="images/banner_6.jpg" />
+				</li>
+				<li>
+					<img src="images/banner_7.jpg" />
+				</li>
+				<li>
+					<img src="images/banner_8.jpg" />
+				</li>
+			</ul>
+			<ul id="list2">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<span></span>
+			<span class="sp la"></span>
+			<i class="iconfont">&#xe652;</i>
+			<span class="sp"></span>
+			<i class="iconfont">&#xe698;</i>
+		</div>
+	</body>
+</html>

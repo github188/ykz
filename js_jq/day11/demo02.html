@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			onload = function(){
+				var aImg = document.getElementsByTagName("img");
+				var a = 0;
+				document.onmousedown = function(e){
+					e = e || event;
+					var disX = e.offsetX;
+					document.onmousemove = function(e){
+						e = e || event; 
+						var i = e.pageX - disX;
+						aImg[0].src = "images"+"/"+"images3"+"/"+(i%77)+"."+"jpg";
+							if(i<0){
+								aImg[0].src = "images"+"/"+"images3"+"/"+(i%77+77)+"."+"jpg";
+							}
+						}
+					document.onmouseup = function(){
+						document.onmousemove = null;
+						document.onmouseup = null;	
+						}
+					}
+				}
+			
+		</script>
+	</head>
+	<body>
+		<img src="images/images3/0.jpg" />
+	</body>
+</html>

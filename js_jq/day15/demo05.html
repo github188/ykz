@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{height: 5000px;}
+			div{height: 50px;width:50px;background: #48E1DF;position: fixed;bottom: 0;right: 0;font-size: 12px;text-align: center;line-height: 50px;cursor: pointer;}
+		</style>
+		<script type="text/javascript" src="move.js"></script>
+		<script>
+			
+			onload = function(){
+				
+				var aDiv = document.getElementsByTagName("div")[0];
+					aDiv.onclick = function(){
+						var timer;
+						timer = setInterval(function(){
+							var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+							var speed = scrollTop / 10;
+							speed = speed>0 ? Math.ceil(speed): Math.floor(speed);
+							document.documentElement.scrollTop = document.body.scrollTop = scrollTop - speed;
+							if(scrollTop == 0){
+								clearInterval(timer);
+							}
+							console.log(scrollTop);
+						},30)
+					
+					}
+				}	
+		</script>
+	</head>
+	<body>
+		<div>回到顶部</div>
+	</body>
+</html>

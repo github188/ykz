@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			onload = function(){
+				var aImg = document.getElementsByTagName("img")[0];
+				document.onmousedown = function(evt){
+					var e = evt || event;
+					console.log(e.clientX+","+e.clientY)
+					
+					aImg.style.top = e.clientY+"px";
+					aImg.style.left = e.clientX+"px";
+					
+				}
+				document.onmousemove = function(evt){
+					var e = evt || event;
+					aImg.style.top = e.clientY-104+"px";
+					aImg.style.left = e.clientX-104+"px";
+				}
+			}
+		</script>
+	</head>
+	<body style="background: #000;">
+		<img src="images/girl.gif" style="position: absolute;top: -59px;left: -59px;"/>
+	</body>
+</html>

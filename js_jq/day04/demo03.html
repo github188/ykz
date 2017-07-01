@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function fn1(){
+				var oInput = document.getElementById("txt");
+				var b = oInput.value;
+				if(b%2 == 0){
+					document.getElementById("p").innerHTML="是偶数"
+				}else{
+					document.getElementById("p").innerHTML="是奇数"
+				}
+			}		
+		</script>
+	</head>
+	<body>
+		<input type="text" placeholder="11" id="txt" />
+		<input type="button" value="提交" onclick="fn1()"/>
+		<p id="p">判断奇偶</p>
+	</body>
+</html>

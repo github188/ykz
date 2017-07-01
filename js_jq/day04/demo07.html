@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			//制作一个简易计算器（计算两个数的加减乘除, 带可手动输入数字和运算符）
+			function fn(){
+				var oInput1 = document.getElementById("txt1");
+				var a = oInput1.value-0;
+				var oInput2 = document.getElementById("txt2");
+				var b =oInput2.value
+				var oInput3 = document.getElementById("txt3");
+				var c = oInput3.value-0;
+				switch(b){
+					case"+":var d=a+c;break;
+					case"*":var d=a*c;break;
+					case"/":var d=a/c;break;
+					case"-":var d=a-c;break;
+					default:d="请输入数字和运算符";
+				}
+				
+				document.getElementById("txt4").value=d;
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="txt1" placeholder="请输入数字" />
+		<input type="text" id="txt2" placeholder="请输入运算符" />
+		<input type="text" id="txt3" placeholder="请输入数字" />
+		<p>=</p>
+		<input type="text" id="txt4"  />
+		<input type="button" value="提交" onclick="fn()"  />
+	</body>
+</html>

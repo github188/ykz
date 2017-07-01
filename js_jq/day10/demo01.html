@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			onload = function(){
+				var box1 = document.getElementsByTagName("div")[0];
+				box1.onmousemove = function(){
+					box1.style.background = "rgb("+parseInt(Math.random()*256)+","+parseInt(Math.random()*256)+","+parseInt(Math.random()*256)+")"
+				}
+				box1.onmouseover = function(){
+					box1.innerHTML = "亲爱的，我爱你"
+				}
+				box1.onmouseout = function(){
+					box1.innerHTML = "对不起，开玩笑"
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div style="width: 100px;height: 100px;"></div>
+	</body>
+</html>

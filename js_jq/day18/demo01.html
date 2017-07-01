@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*Cat: 猫
+			属性：fur
+			方法：eat; miaow
+			GarfieldCat : 加菲猫
+			属性：fur; glasses
+			方法：eat; miaow; talk
+			TomCat : 汤姆猫
+			属性：fur; friend
+			方法：eat; miaow; catchMouse*/
+			
+			function Cat(name,fur){
+				this.name = name;
+				this.fur = fur;
+				this.show = function(x,y,z){
+					console.log(x+" "+y+" "+ z);
+				}
+			}
+			
+			var GarfieldCat = new Cat("加菲猫","glasses")
+			console.log(GarfieldCat.name);
+			console.log(GarfieldCat.fur);
+			GarfieldCat.show("eat", "miaow", "talk");
+			
+			var TomCat = new Cat("汤姆猫","friend");
+			console.log(TomCat.name);
+			console.log(TomCat.fur);
+			TomCat.show("eat", "miaow", "catchMouse");
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

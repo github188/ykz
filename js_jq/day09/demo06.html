@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			.active{background: #48E1DF;color: #fff;}
+			#box1{width: 400px;min-height: 20px;position: relative;}
+			#box1 ul{list-style: none;height: 20px;width: 400px;background: #f2aC7C;}
+			#box1 ul li{padding: 0 20px 0 20px;height: 20px;float: left;cursor: pointer;}
+			#box1 p{width: 100%;box-sizing: border-box;height: 200px;border: 1px solid #FF0000;border-top: 0;position: absolute;top: 20px;display: none;}
+		</style>
+		<script>
+			//4, tab切换, 点击科技显示左图, 点击探索显示右图
+			onload = function(){
+				var oBox1 = document.getElementById("box1");
+				var aLi = document.getElementsByTagName("li");
+				var ap = document.getElementsByTagName("p");
+				for(var i=0; i<aLi.length; i++){
+					aLi[i].onclick = function(){
+						for(var j=0; j<aLi.length; j++){
+							if(this == aLi[j]){
+								this.className = "active";
+								ap[j].style.display = "block";
+							}else{
+								aLi[j].className = "";
+								ap[j].style.display = "none"
+							}
+						}
+				}
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box1">
+			<ul>
+				<li>科技</li>
+				<li>探索</li>
+			</ul>
+			<p>科技科技科技科技</p>
+			<p>探索探索探索探索</p>
+		</div>
+	</body>
+</html>

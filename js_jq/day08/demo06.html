@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style01.css" />
+		<script>
+			//2, 网页换肤, 点击皮肤1, 切换到第一张图的效果, 点击皮肤2切换到第二张图的效果
+			onload = function(){
+				var oLink = document.getElementsByTagName("link")
+				var aInput = document.getElementsByTagName("input");
+				aInput[0].onclick = function(){
+					oLink[0].href= "css/style01.css";
+				}
+				aInput[1].onclick = function(){
+					oLink[0].href= "css/style02.css";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box1" >
+			<div id="box2" >
+				<input type="button" value="皮肤1" />
+				<input type="button" value="皮肤2" />
+			</div>
+		</div>
+	</body>
+</html>

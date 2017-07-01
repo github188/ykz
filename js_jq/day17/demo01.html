@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#list img{display: block;float: left;margin:0 3px;}
+		</style>
+		<script>
+			onload = function(){
+				function $(id){
+					return document.getElementById(id);
+				}
+				
+				//获取样式
+				function getStyleAttr(obj, attr){
+					if (window.getComputedStyle){
+						return window.getComputedStyle(obj, null)[attr];
+					}
+					return obj.currentStyle[attr];
+				}
+				
+				//计算小区域宽高
+				
+				$("smollAre").style.width = parseInt(getStyleAttr($("bigAre"),"width"))*parseInt(getStyleAttr($("smollimg"),"width"))/parseInt(getStyleAttr($("bigimg"),"width"))+"px";
+				$("smollAre").style.height = parseInt(getStyleAttr($("bigAre"),"height"))*parseInt(getStyleAttr($("smollimg"),"height"))/parseInt(getStyleAttr($("bigimg"),"height"))+"px";
+				
+				//缩放比例
+				var scale = parseInt(getStyleAttr($("bigimg"),"width"))/parseInt(getStyleAttr($("smollimg"),"width"))
+				
+				//在小图上移动
+				$("box2").onmousemove = function(e){
+					$("smollAre").style.display = "block";
+					$("bigAre").style.display = "block";
+					e = e || event;
+					var X = e.pageX - $("box1").offsetLeft-$("smollAre").offsetWidth/2;
+					var Y = e.pageY - $("box1").offsetTop-$("smollAre").offsetHeight/2;
+					
+					if(X < parseInt($("box1").style.paddingLeft)){
+						X = parseInt($("box1").style.paddingLeft);
+					}
+					else if(X >= $("box1").offsetWidth-$("smollAre").offsetWidth-parseInt($("box1").style.paddingRight)){
+						X = $("box1").offsetWidth-$("smollAre").offsetWidth-parseInt($("box1").style.paddingRight);
+					}
+					if(Y < parseInt($("box1").style.paddingTop)){
+						Y = parseInt($("box1").style.paddingTop);
+					}
+					else if(Y >= $("box1").offsetHeight-$("smollAre").offsetHeight-($("box1").offsetHeight-$("smollimg").offsetHeight-parseInt($("box1").style.paddingTop))){
+						Y = $("box1").offsetHeight-$("smollAre").offsetHeight-($("box1").offsetHeight-$("smollimg").offsetHeight-parseInt($("box1").style.paddingTop))
+					}
+					
+					$("smollAre").style.left = X +"px";
+					$("smollAre").style.top = Y +"px";
+					
+					$("bigimg").style.left = -(X-parseInt($("box1").style.paddingTop))*scale + "px";
+					$("bigimg").style.top = -(Y-parseInt($("box1").style.paddingTop))*scale + "px";
+				}
+				
+				var aImg = $("list").getElementsByTagName("img");
+				
+				for(var i=0; i<aImg.length; i++){
+					aImg[i].index = i;
+					aImg[i].onmouseenter = function(){
+						$("smollimg").src = "images/images2/"+(this.index+1)+"_2.jpeg"
+						$("bigimg").src = "images/images2/"+(this.index+1)+"_3.jpeg"
+					}
+				}
+				$("box2").onmouseleave = function(){
+					$("smollAre").style.display = "none";
+					$("bigAre").style.display = "none";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box1" style="width: 300px;height: 360px;position: relative;top: 150px;left: 20px;padding: 10px;background: #DDDDDD;">
+			<div id="box2">
+				<img id="smollimg" src="images/images2/1_2.jpeg" style="width: 300px; height: 300px;position: absolute;" />
+				<div id="smollAre" style="width: 100px;height: 100px;background: #48E1DF;opacity: 0.3;filter: alpha(opacity=30);position: absolute;display: none;"></div>
+			</div>
+			<div id="list" style="width: 300px; height: 54px;position: absolute;bottom: 10px;">
+				<img src="images/images2/1_1.jpeg" />
+				<img src="images/images2/2_1.jpeg" />
+				<img src="images/images2/3_1.jpeg" />
+				<img src="images/images2/4_1.jpeg" />
+				<img src="images/images2/5_1.jpeg" />
+			</div>
+		</div>
+		<div id="bigAre" style="position: absolute;width: 300px;height: 300px;overflow: hidden;left: 500px;top: 150px;display: none;">
+			<img id="bigimg" src="images/images2/1_3.jpeg" style="width:800px;height: 800px;position:absolute"/>
+		</div>
+	</body>
+</html>

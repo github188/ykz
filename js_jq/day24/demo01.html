@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*父类：Cat
+			方法： eat; miaow
+			属性： fur
+			说明： eat吃各种东西
+			子类1： GarfieldCat
+			方法：eat; miaow; talk
+			属性：fur; glasses
+			说明：eat只吃肉
+			子类2： TomCat
+			方法：eat; miaow; catchMouse
+			属性：fur; friend
+			说明：eat只吃面包*/
+			
+			function Cat(){
+				this.fur = "red";
+				this.eat = function(){
+					console.log("吃各种东西")
+				}
+				this.miaow = function(){
+					console.log("喵喵")
+				}
+			}
+			var cat = new Cat();
+			console.log(cat.fur);
+			cat.eat();
+			cat.miaow();
+			
+			function GarfieldCat(){
+				this.glasses = "green";
+				
+				this.eat = function(){
+					console.log("只吃肉")
+				}
+			}
+			
+			GarfieldCat.prototype = new Cat();
+			GarfieldCat.prototype.talk = function(){
+				console.log("给我滚粗")
+			}
+			
+			var garfieldcat = new GarfieldCat();
+			console.log(garfieldcat.fur);
+			console.log(garfieldcat.glasses);
+			garfieldcat.talk();
+			garfieldcat.eat();
+			garfieldcat.miaow();
+			
+			function TomCat(){
+				this.friend = "杰克"
+				this.catchMouse = function(){
+					console.log("抓老鼠")
+				};
+				this.eat = function(){
+					console.log("只吃面包")
+				}
+			}
+			TomCat.prototype = new Cat();
+			
+			var tomcat = new TomCat();
+			console.log(tomcat.fur);
+			console.log(tomcat.friend);
+			tomcat.eat();
+			tomcat.catchMouse();
+			tomcat.talk();
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

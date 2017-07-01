@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			//写个函数实现n的阶乘;
+			function fn(n){
+				if(n == 0){return n=1};
+				return fn(n-1)*n;	
+			}
+			console.log(fn(5));
+			//找出0-100之间7的倍数，和包含7的数字
+			function fn1(n){
+				for(var i=0; i<=n; i++){
+					if(i%7 == 0 || i%10 == 7){
+						console.log(i);
+					}
+				}
+			}
+			fn1(100);
+			//不用循环，计算0-100以内的数字和
+			function fn(n){
+				if(n == 1){return n=1};
+				return fn(n-1)+n;	
+			}
+			console.log(fn(100));
+		
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

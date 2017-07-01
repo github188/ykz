@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			onload = function(){
+				var oBox = document.getElementsByTagName("div")[0];
+				var i = 0;
+				var j = 0;
+				window.onkeydown = function(e){
+					var e = e || event;
+					
+					console.log(e.keyCode);
+					if(e.ctrlKey && e.keyCode == 67){
+						oBox.style.background = "rgb("+parseInt(Math.random()*256)+","+parseInt(Math.random()*256)+","+parseInt(Math.random()*256)+")"
+					}
+					else if(e.shiftKey && e.ctrlKey && e.keyCode == 82){
+						oBox.style.background = " #48E1DF";
+					}else if(e.keyCode == 38){
+						
+						oBox.style.top = --i + "px";
+					}else if(e.keyCode == 40){
+						
+						oBox.style.top = ++i + "px";
+					}else if(e.keyCode == 37){
+						
+						oBox.style.left = --j + "px";
+					}else if(e.keyCode == 39){
+						
+						oBox.style.left = ++j + "px";
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div style="background: #48E1DF;width: 100px;height: 100px;position: absolute;top:0;left: 0;"></div>
+	</body>
+</html>

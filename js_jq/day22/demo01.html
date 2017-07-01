@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="ajax.js"></script>
+		<script>
+			onload = function(){
+				var aInput = document.getElementsByTagName("input");
+				
+				
+				aInput[3].onclick = function(){
+					var xhr = createXHR();
+					xhr.open("POST","http://60.205.181.47/myPHPCode3/register.php",true);
+					xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+					var name = aInput[0].value;
+					var paw = aInput[1].value;
+					var age = aInput[2].value;
+					xhr.send('username='+name+'&password='+paw+'&age='+age);
+					xhr.onreadystatechange = function(){
+						if(xhr.readyState == 4 && xhr.status == 200){
+							
+							var arr = JSON.parse(xhr.responseText);
+							console.log(arr.msg)
+						}
+					}
+				}
+			
+			}
+		</script>
+	</head>
+	<body>
+		<h3>注册</h3>
+		<form>
+			<input type="text" placeholder="请输入用户名" /><br />
+			<input type="password" placeholder="请输入用户密码" /><br />
+			<input type="number" placeholder="请输入用户年龄" /><br />
+			<input type="button" value="注册" />
+		</form>
+	</body>
+</html>

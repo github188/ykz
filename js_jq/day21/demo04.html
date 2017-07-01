@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			ul{list-style: none; width: 400px;margin: 0 auto;}
+			li{width: 404px;border: 1px solid #FFA500;margin-bottom: 10px;}
+			li p{line-height:22px;}
+			.p1{color: #FFA500;}
+		</style>
+		<script type="text/javascript" src="ajax.js"></script>
+		<script>
+			onload = function(){
+				var oUl = document.getElementsByTagName("ul")[0];
+				
+				var xhr = createXHR();
+				xhr.open("get","http://60.205.181.47/myPHPCode2/weibo.php", true);
+				xhr.send(null);
+				xhr.onreadystatechange = function(){
+					if(xhr.readyState == 4 && xhr.status == 200){
+						var arr = JSON.parse(xhr.responseText);
+						for(var i=0; i<arr.length; i++){
+							obj = arr[i];
+							var li = document.createElement("li");
+							li.innerHTML = "<p>"+ obj.content+"</p><p class='p1'>"+obj.comtcnt+"人评论 "+obj.comtcnt+"人赞"+"</p>"
+							oUl.appendChild(li);
+						}
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<ul></ul>
+	</body>
+</html>

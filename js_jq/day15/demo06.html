@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="move.js"></script>
+		<script>
+			onload = function(){
+				
+				var aImg = document.getElementsByTagName("img")[0];
+				
+				aImg.onmouseenter = function(){
+					animate(this,{opacity:100})
+				}
+				aImg.onmouseout = function(){
+					animate(this,{opacity:50})
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<img src="images/10.jpg" style="height: 200px;width: 200px;opacity: 0.5;filter: alpha(opacity=50);"/>
+	</body>
+</html>

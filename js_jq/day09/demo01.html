@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			table,th,td{border:1px solid #000;}
+		</style>
+		<script>
+			onload = function(){
+				var oInput = document.getElementsByTagName("input");
+				var aTable = document.getElementsByTagName("table")[0];
+				var aBody = document.getElementsByTagName("body")[0];
+				oInput[3].onclick = function(){
+					var tr1 = document.createElement("tr");
+					aTable.appendChild(tr1);
+					var td1 = document.createElement("td");
+					td1.innerHTML = oInput[0].value;
+					tr1.appendChild(td1);
+					var td2 = document.createElement("td");
+					td2.innerHTML = oInput[1].value;
+					tr1.appendChild(td2);
+					var td3 = document.createElement("td");
+					td3.innerHTML = oInput[2].value;
+					tr1.appendChild(td3);
+					var td4 = document.createElement("td");
+					td4.innerHTML = "删除";
+					td4.style.textDecoration = "underline";
+					td4.style.color = "blue";
+					tr1.appendChild(td4);
+					td4.onclick = function(){
+						aTable.removeChild(tr1);
+					}
+				}
+					
+			}
+			
+		</script>
+	</head>
+	<body>
+		ID：<input type="text" />
+		姓名：<input type="text" />
+		电话：<input type="text" />
+		<input type="button" value="保存" />
+		<table>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Tel</th>
+				<th>操作</th>
+			</tr>
+		</table>
+		<div id="box1" style="background:">
+		</div>
+	</body>
+</html>

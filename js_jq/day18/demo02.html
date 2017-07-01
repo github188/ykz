@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			
+			onload = function(){
+				
+				function Drag(id){
+					var drag = {};
+					drag.oBox = document.getElementById(id);
+					drag.oBox.onmousedown = function(e){
+						e = e || event;
+						drag.start(e.pageX,e.pageY);
+					}
+					drag.start = function(x,y){
+						this.X = x - this.oBox.offsetLeft;
+						this.Y = y - this.oBox.offsetTop;
+						
+						document.onmousemove = function(e){
+							e = e || event;
+							drag.moving(e.pageX,e.pageY);
+						}
+					}
+					drag.moving = function(x,y){
+						this.oBox.style.left = x - this.X + "px";
+						this.oBox.style.top = y - this.Y + "px";
+						
+						document.onmouseup = function(){
+							drag.out();
+						}
+					}
+					drag.out = function(){
+						
+						document.onmousemove = null;
+						document.onmouseup = null;
+						
+					}
+					return drag;
+				}
+				
+				Drag("box1");
+				Drag("box2");
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div id="box1" style="width: 100px; height: 100px;background: #FF6700; position: absolute;left: 0;top: 0;"></div>
+		<div id="box2" style="width: 100px; height: 100px;background: #aF6801; position: absolute;left: 0;top: 110px;"></div>
+	</body>
+</html>

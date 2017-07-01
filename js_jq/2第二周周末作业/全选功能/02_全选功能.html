@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			onload = function(){
+				
+				//提示: checked属性可以得到复选框的选中状态
+				var aInput1 = document.getElementsByClassName("option");
+				var oCheck = document.getElementsByClassName("check")[0];
+				oCheck.onclick = function(){
+					for(var i=0; i<aInput1.length; i++){
+						aInput1[i].checked = true;
+					}
+					if(oCheck.checked == false){
+						for(var i=0; i<aInput1.length; i++){
+							aInput1[i].checked = false;
+						}
+					}
+				}
+				for(var j=0; j<aInput1.length;j++){
+					aInput1[j].onclick = function(){
+						if(this.checked == false){
+						oCheck.checked = false;
+						}
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		
+		<input type="checkbox" class="option" />基围虾 <br>
+		<input type="checkbox" class="option" />小龙虾 <br>
+		<input type="checkbox" class="option" />帝王蟹 <br>
+		<input type="checkbox" class="option" />螃蟹 <br>
+		<input type="checkbox" class="option" />大闸蟹 <br><br>
+			<input type="checkbox" class="check" />全选 
+			
+		
+	</body>
+</html>

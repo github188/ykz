@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			div{width: 100px;height: 100px;background: red;position: relative;left: -100px;}
+			div p{width: 112px;height: 48px;font-size: 12px;position: absolute;top: 50%;margin-top: -24px;cursor: pointer;z-index: 1;}
+			div span{width: 12px;height: 48px;display: block;background: #F2AC7C;position: absolute;right: -12px;font-size: 12px;top: 50%;margin-top: -24px;}
+		</style>
+		<script type="text/javascript" src="move.js"></script>
+		<script>
+			
+			onload = function(){
+				
+				var aDiv = document.getElementsByTagName("div")[0];
+				var aP = document.getElementsByTagName("p")[0];
+				
+				aP.onmouseenter = function(){
+					animate(aDiv,{left:0})
+				}
+				
+				aP.onmouseout =function(){
+					animate(aDiv,{left:-100})
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div>
+			<p></p>
+			<span>分享到</span>
+		</div>
+	</body>
+</html>

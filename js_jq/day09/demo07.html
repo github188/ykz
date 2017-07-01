@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{height: 5000px;}
+			div{width: 100px;height: 100px;background: #FF0000;position: fixed;bottom: 0;right: 0;cursor: pointer;display: none;}
+		</style>
+		<script>
+			//2, 回到顶部, 当滚动条滚动到距离顶部超过2000时, 显示回到顶部(红色部分), 并当点击回到顶部时,让页面回到顶部
+			onload = function(){
+				var div1 = document.getElementsByTagName("div")[0];
+				onscroll = function(){
+					var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+					if(scrollTop > 1000){
+						div1.style.display = "block";
+					}else{
+						div1.style.display = "none";
+					}
+				}
+				div1.onclick = function(){
+					document.documentElement.scrollTop = document.body.scrollTop = 0;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div>回到顶部</div>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+		<p>测试文字</p>
+	</body>
+</html>

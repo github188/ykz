@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			body{background: #000000;overflow: hidden;}
+			.box1{width: 10px;height: 40px;background:#fff;position: absolute;}
+			.box2{width: 10px;height: 10px;position: absolute; border-radius: 50%;}
+			.box3{width: 20px; height: 20px;color: #FF0000;display: block;position: absolute;font-size: 30px;}
+		</style>
+		<script type="text/javascript" src="move.js"></script>
+		<script>
+			onload = function(){
+				document.onmousedown = function(e){
+					e = e || event;
+					var X = e.pageX;
+					var Y = e.pageY;
+					var winHeight = document.documentElement.clientHeight;
+					var fireNode = document.createElement("div");
+					fireNode.className = "box1";
+					fireNode.style.left = X + "px";
+					fireNode.style.top = winHeight + "px"
+					document.body.appendChild(fireNode); 
+					
+					var fly = document.createElement("i");
+					fly.innerHTML = "&#xe65c"+";";
+					fly.className = "box3"+" iconfont";
+					fly.style.left = 0 + "px";
+					fly.style.top = (Y-10) + "px"
+					document.body.appendChild(fly); 
+					
+					animate(fly,{left:X-13})
+					animate(fireNode , {top:Y+10,width:5,height:5},function(){
+						document.body.removeChild(fireNode);
+						document.body.removeChild(fly);
+						for(var i=0; i<parseInt(Math.random()*30)+30; i++){
+							
+							spick(X,Y);
+						}
+					} )
+					 
+					function spick(x,y){
+						var sparkNode = document.createElement("div");
+							sparkNode.className = "box2";
+							sparkNode.style.left = X + "px";
+							sparkNode.style.top = Y + "px";
+							sparkNode.style.backgroundColor = "rgb("+parseInt(Math.random()*256)+","+parseInt(Math.random()*256)+","+parseInt(Math.random()*256)+")";
+						document.body.appendChild(sparkNode);
+						var xSpeed = parseInt(Math.random()*20) * (Math.random()>0.5 ? 1 : -1); 
+						var ySpeed = parseInt(Math.random()*20) * (Math.random()>0.5 ? 1 : -1);
+						animate(sparkNode,{width:1,height:1},function(){
+							animate(sparkNode,{width:5,height:5},function(){
+								animate(sparkNode,{width:1,height:1});
+							});
+						});
+						var timer = setInterval(function(){
+							ySpeed++;
+							
+							sparkNode.style.left = sparkNode.offsetLeft + xSpeed + "px";
+							sparkNode.style.top = sparkNode.offsetTop + ySpeed + "px";
+							
+							if(sparkNode.offsetLeft<0 || sparkNode.offsetLeft>document.documentElement.clientWidth
+								||sparkNode.offsetTop>document.documentElement.clientHeight ){
+									document.body.removeChild(sparkNode);
+									clearInterval(timer);
+									
+								}
+							
+							
+						},30)
+					}	 
+				}
+			}
+		</script>
+		
+	</head>
+	<body>
+		
+	</body>
+</html>

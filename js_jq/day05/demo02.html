@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*给定一个不存在重复元素的整数数组，例如[6,4,7,2,5,8]和一个数字，例如10，
+			     请设计一个函数找出两个元素(
+			     或同一个元素加自身)，并且使这两个数的和为给定数字，并打印出来
+			     例如[6,4,7,2,5,8]和数字10. 打印结果为: 6,4 2,8 5,5*/
+			    var arr = [6,4,7,2,5,8]
+			    for(var i=0; i<arr.length; i++){
+			    	
+			    	for(var b =0; b < arr.length; b++){
+			    	if((arr[b]+arr[i])%10 == 0){
+			    		console.log(arr[i]+","+arr[b]);
+			    		arr[i]=0;
+			    	} 
+			    	} 
+			    }    
+		</script>
+	</head> 
+	<body>
+	</body>
+</html>

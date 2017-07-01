@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*1, 如下图, 在输入框中输入用户名和密码,
+ 				当鼠标失去焦点时: 检测用户名长度至少6位, 且只能为数字和字母;检测密码
+				长度至少8位
+ 			给登录按钮添加点击事件: 点击后弹出用户名和密码*/
+ 			onload = function(){
+ 				var aInput = document.getElementsByTagName("input");
+ 				var aSpan = document.getElementsByTagName("span");
+ 				
+ 				aInput[0].onblur = function(){
+ 					aSpan[0].innerHTML = "";
+ 					if(aInput[0].value.length == 0){
+ 							aSpan[0].innerHTML = "*用户名不能为空";
+ 					}
+ 					for(var i=0; i<aInput[0].value.length; i++){
+ 						if(aInput[0].value.length < 6 ){
+ 							aSpan[0].innerHTML = "*用户名不能小于6"
+ 						}
+ 						if((aInput[0].value[i]-0>=0 && aInput[0].value[i]-0<=9 )||(aInput[0].value[i]>="A" && aInput[0].value[i]<="Z" )||(aInput[0].value[i]>="a" && aInput[0].value[i]<="z")){
+ 							
+ 						}else {
+ 							aSpan[0].innerHTML = "*用户名不能为特殊字符";
+ 						}
+ 					}
+ 				} 
+ 				aInput[1].onblur = function(){
+ 					aSpan[1].innerHTML = "";
+ 					if(aInput[1].value.length == 0){
+ 							aSpan[1].innerHTML = "*密码不能为空";
+ 					}else if(aInput[1].value.length < 8){
+ 						aSpan[1].innerHTML = "密码长度至少8位";
+ 					}
+ 				}
+ 				aInput[2].onclick = function(){
+ 					alert("用户名："+aInput[0].value+"  "+"密码："+aInput[1].value)
+ 				}
+ 			}
+ 			
+		</script>
+	</head>
+	<body>
+		<form>
+			<input type="text" placeholder="用户名"/><span style="color: #FF0000;font-size: 12px;"></span>
+			<br />
+			<input type="password" placeholder="密码" /><span style="color: #FF0000;font-size: 12px;"></span>
+			<br />
+			<input type="submit" value="登入" />
+		</form>
+	</body>
+</html>

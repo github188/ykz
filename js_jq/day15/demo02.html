@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			
+			onload = function(){
+				
+				var aBt = document.getElementsByTagName("button")[0];
+				var aDiv = document.getElementsByTagName("div")[0];
+				
+				function getStyleAttr(obj,attr){
+					if(window.getComputedStyle){
+						return window.getComputedStyle(obj,null)[attr];
+					}
+					return obj.currentStyle[attr];
+				}
+				
+				aBt.onclick = function(){
+					animent(aDiv,"left",400,function(){
+						animent(aDiv,"left",0);
+					})
+				}
+				
+				function animent(obj,attr,iTarget, fn){
+					
+					obj.timer = setInterval(function(){
+						
+						var a = parseFloat(getStyleAttr(obj,attr));
+						a = Math.round(a);
+						
+						var speed = (iTarget - a) / 8;
+						speed = speed>0 ? Math.ceil(speed) : Math.floor(speed);
+						
+						if(a == iTarget){
+							
+							clearInterval(obj.timer);
+							
+							if(fn){
+								fn();
+							}
+							
+						}
+						
+						aDiv.style[attr] = a + speed + "px";
+						
+					},30)
+					
+					
+					
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<button>开始运动</button>
+		<div style="height: 100px;width: 100px;background: red;position: absolute;left: 0;top: 50px;"></div>
+	</body>
+</html>

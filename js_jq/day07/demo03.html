@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box1{width: 200px;height: 200px;border: 1px solid #827c7c;background: #f7d7d7;}
+		</style>
+		<script>
+			//4, 广告窗口自动关闭, 倒计时5秒后关闭窗口 (分别使用定时器和延时器)
+			onload = function(){
+				var aSpan = document.getElementsByTagName("span")[0];
+				var box = document.getElementById("box1");
+				var i = 5;
+				var timer;
+				timer = setInterval(function(){
+					i--;
+					if(i < 0){
+						clearInterval(timer);
+						box.style.display = "none";
+					}
+					aSpan.innerHTML = i;
+				},1000) 
+			}
+			
+		</script>
+	</head> 
+	<body>
+		<div id="box1">
+			<p>广告窗口自动关闭, 倒计时<span>5</span>秒后关闭窗口</p>
+		</div>
+	</body>
+</html>

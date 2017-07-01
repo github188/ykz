@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			ul{list-style: none;}
+			ul li{border: 1px solid #FF6700;}
+		</style>
+		<script type="text/javascript" src="ajax.js"></script>
+		<script>
+			onload = function(){
+				var oUl = document.getElementsByTagName("ul")[0];
+				var oP = document.getElementsByTagName("p")[0];
+				var i = 1;
+				var xhr = createXHR();
+				xhr.open("get","http://60.205.181.47/myPHPCode2/football.php?page="+i,true);
+				xhr.send(null);
+				xhr.onreadystatechange = function(){
+					if(xhr.readyState == 4 && xhr.status == 200){
+						var responseArr = JSON.parse(xhr.responseText);
+						for(var i=0; i<responseArr.length; i++){
+							obj = responseArr[i];
+							var li = document.createElement("li");
+							li.innerHTML = obj.name+"<br />"+obj.content;
+							oUl.appendChild(li);
+						}
+					}
+				}
+				
+				oP.onclick = function(){
+					i++;
+					var aLi = document.getElementsByTagName("li");
+					for(var j=0; j<aLi.length; j++){
+						oUl.removeChild(aLi[j]);
+					}
+					var xhr = createXHR();
+					xhr.open("get","http://60.205.181.47/myPHPCode2/football.php?page="+i,true);
+					xhr.send(null);
+					xhr.onreadystatechange = function(){
+					if(xhr.readyState == 4 && xhr.status == 200){
+						var responseArr = JSON.parse(xhr.responseText);
+						
+						for(var i=0; i<responseArr.length; i++){
+							obj = responseArr[i];
+							var li = document.createElement("li");
+							li.innerHTML = obj.name+"<br />"+obj.content;
+							oUl.appendChild(li);
+						}
+					}
+				}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<ul></ul>
+		<p style="width: 120px;height: 30px;background: #FF6700;line-height: 30px;text-align: center;cursor: pointer;">加载下一页数据</p>
+	</body>
+</html>

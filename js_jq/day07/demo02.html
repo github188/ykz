@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box2{width: 0px;height: 10px;background:red;}
+			#box1{width: 100px;height: 10px;border:#FF0000 1px dotted ;}
+		</style>
+		<script>
+			/*3, 使用定时器实现进度条,
+				提示: 获取标签对象, 并改变style属性的width值
+				var proBar = document.getElementById("progressBar");
+				proBar.style.width = barW + "px";	*/
+				onload = function(){
+					var box = document.getElementById("box1");
+					var box2 = document.getElementById("box2");
+					var sum = document.getElementById("p");
+					var i = 0;
+					var timer;
+					timer = setInterval(function(){
+						i++;
+						box2.style.width = i+"px";
+						if(i == 100){
+						clearInterval(timer)
+						
+					}
+						p.innerHTML = i+"%";
+					},100) 
+					
+				}
+		</script>
+	</head>
+	<body>
+		进度条
+		<div id="box1">
+			<div id="box2"></div>
+		</div>
+		<p id="p">0%</p>
+		
+	</body>
+</html>

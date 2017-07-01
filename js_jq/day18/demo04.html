@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.fireworm{width: 15px;height: 15px;position: absolute;}
+		</style>
+		<script type="text/javascript" src="move.js"></script>
+		<script>
+			onload = function(){
+				//创建萤火虫类glowworm
+				
+				function Fireworm(id){
+					//每秒创建一个萤火虫
+					
+						
+					var oBox = document.getElementById(id);
+					
+					setInterval(function(){
+						//位置left,top
+						var oLeft = parseInt(Math.random()*1024)
+						var oTop = parseInt(Math.random()*546)
+						//添加节点
+						var img = document.createElement("img");
+						img.className = "fireworm";
+						img.src = "images/1.jpg";
+						img.style.left = oLeft + "px";
+						img.style.top = oTop + "px";
+						oBox.appendChild(img);
+						//运动
+						var xSpeed = parseInt(Math.random()*20)*(Math.random()>0.5 ? 1 : -1);
+						var ySpeed = parseInt(Math.random()*20)*(Math.random()>0.5 ? 1 : -1);
+						var time = setInterval(function(){
+							
+							img.style.left = img.offsetLeft + xSpeed + "px";
+							img.style.top = img.offsetTop + ySpeed + "px";
+							
+							if(img.offsetLeft < 0 
+							|| img.offsetLeft > oBox.offsetWidth
+							|| img.offsetTop > oBox.offsetHeight
+							|| img.offsetTop < 0){
+								oBox.removeChild(img);
+								clearInterval(time);
+								
+							}
+							
+							
+							
+						},200)
+						var c = document.getElementsByClassName("fireworm");
+							for(var i=0; i<c.length; c++){
+								
+								if(c.length == 5){
+									oBox.removeChild(c[0]);
+								}
+							}
+						
+					},1000)
+					
+				}
+				Fireworm("box1")
+			}
+		</script>
+	</head>
+	<body style="background: #000;">
+		<div id="box1" style="width: 1024px;height:546px;margin: 50px auto;background: url(images/bg.jpg) no-repeat;position: relative;">
+			
+		</div>
+	</body>
+</html>
